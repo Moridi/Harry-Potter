@@ -1,0 +1,89 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class Course 
+{
+	private String name;
+	private String professorName;
+	private Vector<String> studentNames;
+	private char minGrade;
+	private int year;
+
+	// Constructors
+	
+	public Course(String _name)
+	{	
+		name = _name;
+		professorName = new String ("Unknown!");
+		minGrade = 'O';
+		year = 1996;
+		studentNames = new Vector<String>();
+	}
+	
+	public Course(String _name, String _professorName, char _minGrade, int _year)
+	{	
+		name = _name;
+		professorName = _professorName;
+		minGrade = _minGrade;
+		year = _year;
+		studentNames = new Vector<String>();
+	}
+	
+	// Getters
+	
+	public String getName()
+	{
+		return name;
+	}
+	public String getProfessorName()
+	{
+		return professorName;
+	}
+	public char getMinGrade()
+	{
+		return minGrade;
+	}
+	public int getYear()
+	{
+		return year;
+	}
+	public Vector<String> getStudentNames()
+	{
+		return studentNames;
+	}
+	
+	// Setters
+	
+	public void setName(String _name)
+	{
+		name = _name;
+	}
+	public void setNumOfStudents(int _numOfStudents)
+	{
+		numOfStudents = _numOfStudents;
+	}
+	public void setHoused(boolean _housed)
+	{
+		housed = _housed;
+	}
+	public void setCourseNames(ArrayList<String> _courseNames)
+	{
+		courseNames = _courseNames;
+	}
+	public void setHouseNames(ArrayList<String> _houseNames)
+	{
+		houseNames = _houseNames;
+	}
+	public void setStudentNames(Vector<String> _studentNames)
+	{
+		studentNames = _studentNames;
+	}
+	public void setProfessorNames(Vector<String> _professorNames)
+	{
+		professorNames = _professorNames;
+	}
+	
+	
+}
