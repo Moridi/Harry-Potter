@@ -1,0 +1,47 @@
+package entities;
+
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class School {
+	
+	private String name;
+	private int numOfStudents;
+	private boolean housed;
+	private ArrayList<String> houseNames;
+	private ArrayList<String> studentNames;
+	private Vector<String> professorNames;
+	private ArrayList<String> courseNames;
+	
+	// Constructor
+	
+	public School(String _name)
+	{	
+		name = _name;
+		numOfStudents = 0;
+		housed = false;
+		houseNames = new ArrayList<String>;
+		studentNames = new ArrayList<String>;
+		professorNames = new Vector<String>;
+		courseNames = new ArrayList<String>;
+	}
+	
+	public School(String _name, ArrayList<String> _houseNames, ArrayList<String> _studentNames,
+			Vector<String> _professorNames, ArrayList<String> _courseNames)
+	{	
+		name = _name;
+		houseNames = _houseNames;
+		studentNames = _studentNames;
+		professorNames = _professorNames;
+		courseNames = _courseNames;
+		if (studentNames != null)
+			numOfStudents = studentNames.size();
+		else
+			numOfStudents = 0;
+		if (houseNames == null || houseNames.isEmpty())
+			housed = false;
+		else
+			housed = true;
+		
+	}
+}

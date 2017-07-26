@@ -22,3 +22,9 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.jface.text 2 0 2017-07-26 22:27:43.856
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.ui.navigator 4 0 2017-07-26 22:55:00.497
+!MESSAGE Cannot find navigator content extension (using triggerPoints) for object "<null>" parent path: "src [in Harry-Potter]
+  <default> (not open)
+  entities (not open)
+  tests (not open)".  Check that you have an expression for this object in a navigatorContent triggerPoints or enablement.
