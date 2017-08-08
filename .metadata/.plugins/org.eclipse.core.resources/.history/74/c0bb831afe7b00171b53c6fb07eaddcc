@@ -1,0 +1,12 @@
+package entities;
+
+import java.util.Vector;
+
+public class House {
+	private String name;
+	private School school;
+	private Vector<Student> students;
+	private Professor HeadTeacher;
+	private ArrayList<String> qualities;
+	private Map<Integer, Student> prefects;
+}
