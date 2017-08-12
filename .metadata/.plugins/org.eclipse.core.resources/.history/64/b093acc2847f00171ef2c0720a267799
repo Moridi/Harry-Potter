@@ -63,7 +63,7 @@ public class SchoolTest {
 	public void getStudentsTest()
 	{
 		Vector<Student> students = new Vector<Student>();
-		students.add(new Student("Harry Potter"));
+		students.add(new Student());
 		
 		hogwarts = new School("Hogwarts", null, null, null, students, null, null);
 		
@@ -71,7 +71,7 @@ public class SchoolTest {
 		
 		for(Student x : actual)
 		{
-			System.out.println(x.getName());
+			System.out.println(x);
 		}
 	
 	}
@@ -136,18 +136,31 @@ public class SchoolTest {
 	@Test
 	public void setStudentsTest()
 	{
-		Vector<Student> students = new Vector<Student>();
-		students.add(new Student("Harry Potter"));
-		students.add(new Student("Luna Lovegood"));
-		students.add(new Student("Lucius Malfoy"));
+		Vector<String> students = new Vector<String>();
+		students.add("Harry Potter");
+		students.add("Luna Lovegood");
+		students.add("Lucius Malfoy");
 		hogwarts = new School("Hogwarts");
 		hogwarts.setStudentNames(students);
-		Vector<Student> actual = hogwarts.getStudentNames();
-	
-		for(Student x:actual)
-		{
-			System.out.println(x.getName());
-		}
+		Vector<String> actual = hogwarts.getStudentNames();
+		Vector<String> expected = students;
+		Assert.assertArrayEquals(expected.toArray(), actual.toArray());
+		
+	}
+	@Test
+	public void setProfessorsTest()
+	{
+		Vector<String> professors = new Vector<String>();
+		professors.add("Severus Snape");
+		professors.add("Albus Dumbledore");
+		professors.add("Minerva McGonnagol");
+		hogwarts = new School("Hogwarts");
+		hogwarts.setProfessorNames(professors);
+		
+		Vector<String> actual = hogwarts.getProfessorNames();
+		Vector<String> expected = professors;
+		Assert.assertArrayEquals(expected.toArray(), actual.toArray());
+
 	}
 
 }

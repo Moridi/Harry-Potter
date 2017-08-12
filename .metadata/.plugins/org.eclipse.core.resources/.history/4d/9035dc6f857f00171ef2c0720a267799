@@ -17,7 +17,7 @@ public class CourseTest {
 	{
 		flying = new Course("flying");
 		Vector<Student> students = new Vector<Student>();
-		Student temp = new Student("Harry Potter");
+		Student temp = new Student();
 		students.add(temp);
 		flying.setStudentNames(students);
 		
@@ -67,4 +67,3 @@ public class CourseTest {
 	
 	}
 }
-

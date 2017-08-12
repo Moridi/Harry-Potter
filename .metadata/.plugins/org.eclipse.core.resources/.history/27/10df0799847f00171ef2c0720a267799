@@ -4,18 +4,17 @@ import java.util.Vector;
 
 public class Student {
 	
-	private String name;
+	private String Name;
 	private Vector<Course> courses;
 	private Vector<FinishedCourse> reportCard;
 	
 	public Student(String name, Vector<Course> courses, Vector<FinishedCourse> reportCard) {
-		this.name = name;
+		this.Name = name;
 		this.courses = courses;
 		this.reportCard = reportCard;
 	}
 	
-	public Student(String name){
-		this.name = name;
+	public Student(){
 		this.courses = null;
 		this.reportCard = null;
 	}
@@ -29,14 +28,6 @@ public class Student {
 	public Vector<Course> getCourses() {
 		return courses;
 	}
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public void setCourses(Vector<Course> courses) {
 		this.courses = courses;
 	}

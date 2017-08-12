@@ -149,5 +149,19 @@ public class SchoolTest {
 			System.out.println(x.getName());
 		}
 	}
+	@Test
+	public void setProfessorsTest()
+	{
+		Vector<Professor> professors = new Vector<Professor>();
+		professors.add(new Professor("Severus Snape"));
+		hogwarts.setProfessorNames(professors);
+		
+		Vector<Professor> actual = hogwarts.getProfessorNames();
+		
+		for(Professor x: actual)
+		{
+			System.out.println(x.getName());
+		}
+	}
 
 }

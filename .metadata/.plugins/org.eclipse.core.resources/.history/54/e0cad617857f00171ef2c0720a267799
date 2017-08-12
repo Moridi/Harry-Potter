@@ -149,5 +149,19 @@ public class SchoolTest {
 			System.out.println(x.getName());
 		}
 	}
+	@Test
+	public void setProfessorsTest()
+	{
+		Vector<Professor> professors = new Vector<Professor>();
+		professors.add(new Professor("Severus Snape"));
+		professors.add(new Professor("Albus Dumbledore"));
+		professors.add(new Professor("Minerva McGonnagol"));
+		hogwarts.setProfessorNames(professors);
+		
+		Vector<String> actual = hogwarts.getProfessorNames();
+		Vector<String> expected = professors;
+		Assert.assertArrayEquals(expected.toArray(), actual.toArray());
+
+	}
 
 }
