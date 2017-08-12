@@ -7,9 +7,6 @@ public class Professor extends Person{
 	private Map<Integer, Course> courses;
 	private String notes;
 	
-	// Constructors
-	
-	
 	public Professor(String _name, Map<Integer, Course> courses, String notes) {
 		super(_name);
 		this.courses = courses;
@@ -28,8 +25,6 @@ public class Professor extends Person{
 		return "Professor [courses=" + courses + ", notes=" + notes + "]";
 	}
 
-	//Setters and getters
-	
 	public Map<Integer, Course> getCourses() {
 		return courses;
 	}

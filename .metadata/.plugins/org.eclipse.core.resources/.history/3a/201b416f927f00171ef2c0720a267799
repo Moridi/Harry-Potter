@@ -19,9 +19,6 @@ public class FinishedCourse extends Course{
 		this.passed = passed;
 	}
 	
-	
-	//Setters and getters
-	
 	public FinishedCourse(String _name){
 		super(_name);
 		this.grade = null;

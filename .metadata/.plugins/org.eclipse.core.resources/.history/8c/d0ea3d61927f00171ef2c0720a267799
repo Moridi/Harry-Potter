@@ -37,8 +37,6 @@ public class Person
 				+ school + ", birthday=" + birthday + "]";
 	}
 
-	//Setters and getters
-	
 	public String getName() {
 		return name;
 	}

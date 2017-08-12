@@ -10,17 +10,11 @@ public class FinishedCourse extends Course{
 		return "FinishedCourse [grade=" + grade + ", passed=" + passed + "]";
 	}
 
-	// Constructors
-	
-	
 	public FinishedCourse(String _name, Grade grade, boolean passed) {
 		super(_name);
 		this.grade = grade;
 		this.passed = passed;
 	}
-	
-	
-	//Setters and getters
 	
 	public FinishedCourse(String _name){
 		super(_name);

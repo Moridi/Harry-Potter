@@ -8,9 +8,6 @@ public class Student {
 	private Vector<Course> courses;
 	private Vector<FinishedCourse> reportCard;
 	
-	// Constructors
-	
-	
 	public Student(String name, Vector<Course> courses, Vector<FinishedCourse> reportCard) {
 		this.name = name;
 		this.courses = courses;
@@ -29,8 +26,6 @@ public class Student {
 		return "Student [courses=" + courses + ", reportCard=" + reportCard + "]";
 	}
 
-	//Setters and getters
-	
 	public Vector<Course> getCourses() {
 		return courses;
 	}

@@ -28,8 +28,6 @@ public class Professor extends Person{
 		return "Professor [courses=" + courses + ", notes=" + notes + "]";
 	}
 
-	//Setters and getters
-	
 	public Map<Integer, Course> getCourses() {
 		return courses;
 	}

@@ -12,7 +12,6 @@ public class House {
 	private ArrayList<String> qualities;
 	private Map<Integer, Student> prefects;
 	
-	// Constructors
 	
 	
 	public House(String name, School school, Vector<Student> students, Professor headTeacher,
@@ -42,9 +41,6 @@ public class House {
 				+ ", qualities=" + qualities + ", prefects=" + prefects + "]";
 	}
 
-
-	//Setters and getters
-	
 	public String getName() {
 		return name;
 	}

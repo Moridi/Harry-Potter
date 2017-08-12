@@ -42,9 +42,6 @@ public class House {
 				+ ", qualities=" + qualities + ", prefects=" + prefects + "]";
 	}
 
-
-	//Setters and getters
-	
 	public String getName() {
 		return name;
 	}
