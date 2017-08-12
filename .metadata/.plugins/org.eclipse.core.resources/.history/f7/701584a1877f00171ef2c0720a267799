@@ -62,48 +62,48 @@ public class School {
 		return name;
 	}
 
-	public void setName(String _name) {
-		name = _name;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public int getNumOfStudents() {
 		return numOfStudents;
 	}
 
-	public void setNumOfStudents(int _numOfStudents) {
-		numOfStudents = _numOfStudents;
+	public void setNumOfStudents(int numOfStudents) {
+		this.numOfStudents = numOfStudents;
 	}
 
 	public boolean isHoused() {
 		return housed;
 	}
 
-	public void setHoused(boolean _housed) {
-		housed = _housed;
+	public void setHoused(boolean housed) {
+		this.housed = housed;
 	}
 
 	public ArrayList<House> getHouseNames() {
 		return houseNames;
 	}
 
-	public void setHouseNames(ArrayList<House> _houseNames) {
-		houseNames = _houseNames;
+	public void setHouseNames(ArrayList<House> houseNames) {
+		this.houseNames = houseNames;
 	}
 
 	public Vector<Student> getStudentNames() {
 		return studentNames;
 	}
 
-	public void setStudentNames(Vector<Student> _studentNames) {
-		studentNames = _studentNames;
+	public void setStudentNames(Vector<Student> studentNames) {
+		this.studentNames = studentNames;
 	}
 
 	public Vector<Professor> getProfessorNames() {
 		return professorNames;
 	}
 
-	public void setProfessorNames(Vector<Professor> _professorNames) {
-		professorNames = _professorNames;
+	public void setProfessorNames(Vector<Professor> professorNames) {
+		this.professorNames = professorNames;
 	}
 
 	public ArrayList<Course> getCourseNames() {

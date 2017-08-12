@@ -43,8 +43,8 @@ public class Student {
 	public Vector<FinishedCourse> getReportCard() {
 		return reportCard;
 	}
-	public void setReportCard(Vector<FinishedCourse> _reportCard) {
-		reportCard = _reportCard;
+	public void setReportCard(Vector<FinishedCourse> reportCard) {
+		this.reportCard = reportCard;
 	}
 	
 }

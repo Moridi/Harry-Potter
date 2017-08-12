@@ -28,14 +28,14 @@ public class Professor extends Person{
 	public Map<Integer, Course> getCourses() {
 		return courses;
 	}
-	public void setCourses(Map<Integer, Course> _courses) {
-		courses = _courses;
+	public void setCourses(Map<Integer, Course> courses) {
+		this.courses = courses;
 	}
 	public String getNotes() {
 		return notes;
 	}
-	public void setNotes(String _notes) {
-		notes = _notes;
+	public void setNotes(String notes) {
+		this.notes = notes;
 	}
 	
 	

@@ -44,37 +44,37 @@ public class House {
 	public String getName() {
 		return name;
 	}
-	public void setName(String _name) {
-		name = _name;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public School getSchool() {
 		return school;
 	}
-	public void setSchool(School _school) {
-		school = _school;
+	public void setSchool(School school) {
+		this.school = school;
 	}
 	public Vector<Student> getStudents() {
 		return students;
 	}
-	public void setStudents(Vector<Student> _students) {
-		students = _students;
+	public void setStudents(Vector<Student> students) {
+		this.students = students;
 	}
 	public Professor getHeadTeacher() {
 		return HeadTeacher;
 	}
-	public void setHeadTeacher(Professor _headTeacher) {
-		HeadTeacher = _headTeacher;
+	public void setHeadTeacher(Professor headTeacher) {
+		HeadTeacher = headTeacher;
 	}
 	public ArrayList<String> getQualities() {
 		return qualities;
 	}
-	public void setQualities(ArrayList<String> _qualities) {
-		qualities = _qualities;
+	public void setQualities(ArrayList<String> qualities) {
+		this.qualities = qualities;
 	}
 	public Map<Integer, Student> getPrefects() {
 		return prefects;
 	}
-	public void setPrefects(Map<Integer, Student> _prefects) {
-		prefects = _prefects;
+	public void setPrefects(Map<Integer, Student> prefects) {
+		this.prefects = prefects;
 	}
 }
