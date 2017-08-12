@@ -2,10 +2,12 @@ package tests;
 
 import java.util.Vector;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import entities.Course;
+import entities.Grade;
+import entities.Student;
+import entities.Professor;
 
 public class CourseTest {
 	Course flying;
@@ -14,61 +16,54 @@ public class CourseTest {
 	public void studentsTest() 
 	{
 		flying = new Course("flying");
-		Vector<String> students = new Vector<String>();
-		students.add("Harry Potter");
-		students.add("Ron Weasley");
-		students.add("Hermoine Granger");
-		students.add("Draco Malfoy");
+		Vector<Student> students = new Vector<Student>();
+		Student temp = new Student();
+		students.add(temp);
 		flying.setStudentNames(students);
 		
-		Vector<String> actual = flying.getStudentNames();
-		Vector<String> expected = students;
+		Vector<Student> actual = flying.getStudentNames();
+		System.out.println(actual.toString());			
+
 		
-		Assert.assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 	@Test
 	public void getProfessorTest() {
-		flying = new Course("flying", "Madame Hooch", 'O', 1996);
-		String expected = "Madame Hooch";
-		String actual = flying.getProfessorName();
+		Professor prof = new Professor("Madame Hooch");
+		flying = new Course("flying", prof, Grade.O, 1996);
+		Professor actual = flying.getProfessorName();
+		System.out.println(actual.toString());			
 		
-		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void getNameTest() {
-		flying = new Course("flying", "Madame Hooch", 'O', 1996);
-		String expected = "flying";
+		Professor prof = new Professor("Madame Hooch");
+		flying = new Course("flying", prof, Grade.O, 1996);
 		String actual = flying.getName();
-		
-		Assert.assertEquals(expected, actual);
-		
+		System.out.println(actual);	
 	}
 	@Test
 	public void getMinGradeTest() {
-		flying = new Course("flying", "Madame Hooch", 'O', 1996);
-		char expected = 'O';
-		char actual = flying.getMinGrade();
+		Professor prof = new Professor("Madame Hooch");
+		flying = new Course("flying", prof, Grade.O, 1996);
+		Grade actual = flying.getMinGrade();
+		System.out.println(actual.toString());			
 		
-		Assert.assertEquals(expected, actual);
-
 	}
 	@Test
 	public void setProfessorTest() {
 		flying = new Course("Flying");
-		flying.setProfessorName("Madame Hooch");
-		String expected = "Madame Hooch";
-		String actual = flying.getProfessorName();
-		
-		Assert.assertEquals(expected, actual);
+		Professor prof = new Professor("Madame Hooch");
+		flying.setProfessorName(prof);
+		Professor actual = flying.getProfessorName();
+		System.out.println(actual.toString());			
+
 	}
 	@Test
 	public void setNameTest() {
 		flying = new Course("");
 		flying.setName("Flying");
-		String expected = "Flying";
 		String actual = flying.getName();
-		
-		Assert.assertEquals(expected, actual);
-		
+		System.out.println(actual.toString());			
+	
 	}
 }

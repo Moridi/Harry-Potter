@@ -1,0 +1,71 @@
+package entities;
+
+public class Person 
+{
+	private String name;
+	private House houseName;
+	private BloodStatus bloodStatus;
+	private School school;
+	private String birthday;
+
+	// Constructors
+	
+	public Person(String _name)
+	{	
+		name = _name;
+		houseName = null;
+		bloodStatus = null;
+		school = null;
+	}
+	
+	public Person(String _name, House _houseName, BloodStatus _bloodStatus,
+			School _school, String _birthday)
+	{	
+		name = _name;
+		houseName = _houseName;
+		bloodStatus = _bloodStatus;
+		school = _school;
+		birthday = _birthday;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public House getHouseName() {
+		return houseName;
+	}
+
+	public void setHouseName(House houseName) {
+		this.houseName = houseName;
+	}
+
+	public BloodStatus getBloodStatus() {
+		return bloodStatus;
+	}
+
+	public void setBloodStatus(BloodStatus bloodStatus) {
+		this.bloodStatus = bloodStatus;
+	}
+
+	public School getSchool() {
+		return school;
+	}
+
+	public void setSchool(School school) {
+		this.school = school;
+	}
+
+	public String getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
+
+}

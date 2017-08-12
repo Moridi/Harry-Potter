@@ -5,75 +5,79 @@ import java.util.Vector;
 public class Course 
 {
 	private String name;
-	private String professorName;
-	private Vector<String> studentNames;
-	private char minGrade;
+	private Professor professorName;
+	private Vector<Student> studentNames;
+	private Grade minGrade;
 	private int year;
 
 	// Constructors
 	
+	
+	
 	public Course(String _name)
 	{	
 		name = _name;
-		professorName = new String ("Unknown!");
-		minGrade = 'O';
+		professorName = null;
+		minGrade = Grade.O;
 		year = 1996;
-		studentNames = new Vector<String>();
+		studentNames = null;
 	}
 	
-	public Course(String _name, String _professorName, char _minGrade, int _year)
+	@Override
+	public String toString() {
+		return "Course [name=" + name + ", professorName=" + professorName + ", studentNames=" + studentNames
+				+ ", minGrade=" + minGrade + ", year=" + year + "]";
+	}
+
+	public Course(String _name, Professor _professorName, Grade _minGrade, int _year)
 	{	
 		name = _name;
 		professorName = _professorName;
 		minGrade = _minGrade;
 		year = _year;
-		studentNames = new Vector<String>();
+		studentNames = null;
 	}
-	
-	// Getters
-	
-	public String getName()
-	{
+
+	public String getName() {
 		return name;
 	}
-	public String getProfessorName()
-	{
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Professor getProfessorName() {
 		return professorName;
 	}
-	public char getMinGrade()
-	{
-		return minGrade;
+
+	public void setProfessorName(Professor professorName) {
+		this.professorName = professorName;
 	}
-	public int getYear()
-	{
-		return year;
-	}
-	public Vector<String> getStudentNames()
-	{
+
+	public Vector<Student> getStudentNames() {
 		return studentNames;
 	}
+
+	public void setStudentNames(Vector<Student> studentNames) {
+		this.studentNames = studentNames;
+	}
+
+	public Grade getMinGrade() {
+		return minGrade;
+	}
+
+	public void setMinGrade(Grade minGrade) {
+		this.minGrade = minGrade;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
 	
-	// Setters
-	
-	public void setName(String _name)
-	{
-		name = _name;
-	}
-	public void setProfessorName(String _professorName)
-	{
-		professorName = _professorName;
-	}
-	public void setMinGrade(char _minGrade)
-	{
-		minGrade = _minGrade;
-	}
-	public void setYear(int _year)
-	{
-		year = _year;
-	}
-	public void setStudentNames(Vector<String> _studentNames)
-	{
-		studentNames = _studentNames;
-	}
+
 	
 }

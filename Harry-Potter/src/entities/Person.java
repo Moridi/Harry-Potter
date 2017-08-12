@@ -1,27 +1,26 @@
 package entities;
 
-import java.util.Date;
-
 public class Person 
 {
 	private String name;
-	private String houseName;
-	private String bloodStatus;
-	private String school;
-	private Date birthday;
+	private House houseName;
+	private BloodStatus bloodStatus;
+	private School school;
+	private String birthday;
 
 	// Constructors
+
 	
 	public Person(String _name)
 	{	
 		name = _name;
-		houseName = new String ("Unknown!");
-		bloodStatus = new String ("Unknown!");
-		school = new String ("Unknown!");
+		houseName = null;
+		bloodStatus = null;
+		school = null;
 	}
 	
-	public Person(String _name, String _houseName, String _bloodStatus,
-			String _school, Date _birthday)
+	public Person(String _name, House _houseName, BloodStatus _bloodStatus,
+			School _school, String _birthday)
 	{	
 		name = _name;
 		houseName = _houseName;
@@ -30,50 +29,52 @@ public class Person
 		birthday = _birthday;
 	}
 	
-	// Getters
 	
-	public String getName()
-	{
+
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", houseName=" + houseName + ", bloodStatus=" + bloodStatus + ", school="
+				+ school + ", birthday=" + birthday + "]";
+	}
+
+	public String getName() {
 		return name;
 	}
-	public String getHouseName()
-	{
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public House getHouseName() {
 		return houseName;
 	}
-	public String getBloodStatus()
-	{
+
+	public void setHouseName(House houseName) {
+		this.houseName = houseName;
+	}
+
+	public BloodStatus getBloodStatus() {
 		return bloodStatus;
 	}
-	public String getSchool()
-	{
+
+	public void setBloodStatus(BloodStatus bloodStatus) {
+		this.bloodStatus = bloodStatus;
+	}
+
+	public School getSchool() {
 		return school;
 	}
-	public Date getBirthday()
-	{
+
+	public void setSchool(School school) {
+		this.school = school;
+	}
+
+	public String getBirthday() {
 		return birthday;
 	}
-	
-	// Setters
-	
-	public void setName(String _name)
-	{
-		name = _name;
+
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
 	}
-	public void setHouseName(String _houseName)
-	{
-		houseName = _houseName;
-	}
-	public void setBloodStatus(String _bloodStatus)
-	{
-		bloodStatus = _bloodStatus;
-	}
-	public void setSchool(String _school)
-	{
-		school = _school;
-	}
-	public void setBirthday(Date _birthday)
-	{
-		birthday = _birthday;
-	}
-	
+
 }

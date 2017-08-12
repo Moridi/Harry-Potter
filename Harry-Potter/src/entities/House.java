@@ -2,7 +2,6 @@ package entities;
 
 import java.util.ArrayList;
 import java.util.Vector;
-import java.util.HashMap;
 import java.util.Map;
 
 public class House {
@@ -13,6 +12,35 @@ public class House {
 	private ArrayList<String> qualities;
 	private Map<Integer, Student> prefects;
 	
+	
+	
+	public House(String name, School school, Vector<Student> students, Professor headTeacher,
+			ArrayList<String> qualities, Map<Integer, Student> prefects) {
+		this.name = name;
+		this.school = school;
+		this.students = students;
+		HeadTeacher = headTeacher;
+		this.qualities = qualities;
+		this.prefects = prefects;
+	}
+	
+	public House()
+	{
+		this.name = null;
+		this.school = null;
+		this.students = null;
+		HeadTeacher = null;
+		this.qualities = null;
+		this.prefects = null;
+	}	
+	
+	
+	@Override
+	public String toString() {
+		return "House [name=" + name + ", school=" + school + ", students=" + students + ", HeadTeacher=" + HeadTeacher
+				+ ", qualities=" + qualities + ", prefects=" + prefects + "]";
+	}
+
 	public String getName() {
 		return name;
 	}
