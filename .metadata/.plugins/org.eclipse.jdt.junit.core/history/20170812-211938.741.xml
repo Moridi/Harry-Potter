@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Harry-Potter" project="Harry-Potter" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="tests.CourseTest" time="0.001">
+    <testcase name="setProfessorTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="getMinGradeTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="setNameTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="getNameTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="studentsTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="getProfessorTest" classname="tests.CourseTest" time="0.001"/>
+  </testsuite>
+</testrun>

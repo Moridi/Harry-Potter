@@ -24,9 +24,9 @@ public class House {
 		this.prefects = prefects;
 	}
 	
-	public House(String name)
+	public House()
 	{
-		this.name = name;
+		this.name = null;
 		this.school = null;
 		this.students = null;
 		HeadTeacher = null;

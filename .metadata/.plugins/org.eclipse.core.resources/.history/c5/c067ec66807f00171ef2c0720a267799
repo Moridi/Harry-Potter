@@ -1,6 +1,8 @@
 package tests;
 
+import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,6 +11,7 @@ import entities.BloodStatus;
 import entities.Person;
 import entities.House;
 import entities.School;
+import entities.Grade;
 
 public class PersonTest {
 
@@ -32,7 +35,7 @@ public class PersonTest {
 		House actual = snape.getHouseName();
 		String expected = "Slytherin";
 		
-		Assert.assertEquals(expected, actual.getName());
+		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void getBloodStatusTest() throws ParseException
@@ -71,32 +74,31 @@ public class PersonTest {
 	{
 		snape = new Person("Severus Snape");
 		House house = new House("Slytherin");
-		snape.setHouseName(house);
+		snape.setHouseName();
 		House actual = snape.getHouseName();
-	
-		System.out.println(actual.getName());
-			
+		String expected = "Slytherin";
+		
+		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void setBloodStatusTest()
 	{
 		snape = new Person("Severus Snape");
-		snape.setBloodStatus(BloodStatus.Half_blood);
-		BloodStatus actual = snape.getBloodStatus();
+		snape.setBloodStatus("Half-Blood");
+		String actual = snape.getBloodStatus();
+		String expected = "Half-Blood";
 		
-		System.out.println(actual);
-		
+		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void setSchoolTest()
 	{
 		snape = new Person("Severus Snape");
-		School school = new School("Hogwarts");
-		snape.setSchool(school);
-		School actual = snape.getSchool();
-	
-		System.out.println(actual.getName());
+		snape.setSchool("Hogwarts");
+		String actual = snape.getSchool();
+		String expected = "Hogwarts";
 		
+		Assert.assertEquals(expected, actual);
 	}
 
 }

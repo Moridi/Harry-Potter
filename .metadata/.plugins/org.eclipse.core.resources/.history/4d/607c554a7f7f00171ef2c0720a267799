@@ -1,6 +1,8 @@
 package tests;
 
+import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -32,29 +34,28 @@ public class PersonTest {
 		House actual = snape.getHouseName();
 		String expected = "Slytherin";
 		
-		Assert.assertEquals(expected, actual.getName());
+		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void getBloodStatusTest() throws ParseException
 	{
-		House house = new House("Slytherin");
-		School school = new School("Hogwarts");
-		snape = new Person("Severus Snape", house, BloodStatus.Half_blood, school, "9-01-1960");
+		DateFormat formatter = new SimpleDateFormat("d-MM-yyyy"); 
+		snape = new Person("Severus Snape", "Slytherin", "half-blood", "Hogwarts", formatter.parse("9-01-1960"));
 		
-		BloodStatus actual = snape.getBloodStatus();
+		String actual = snape.getBloodStatus();
+		String expected = "half-blood";
 		
-		System.out.println(actual);
-		
+		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void getSchoolTest() throws ParseException
 	{
-		House house = new House("Slytherin");
-		School school = new School("Hogwarts");
-		snape = new Person("Severus Snape", house, BloodStatus.Half_blood, school, "9-01-1960");
-		School actual = snape.getSchool();
+		DateFormat formatter = new SimpleDateFormat("d-MM-yyyy"); 
+		snape = new Person("Severus Snape", "Slytherin", "half-blood", "Hogwarts", formatter.parse("9-01-1960"));		
+		String actual = snape.getSchool();
+		String expected = "Hogwarts";
 		
-		System.out.println(actual.getName());
+		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void setNameTest()
@@ -70,33 +71,31 @@ public class PersonTest {
 	public void setHouseTest()
 	{
 		snape = new Person("Severus Snape");
-		House house = new House("Slytherin");
-		snape.setHouseName(house);
-		House actual = snape.getHouseName();
-	
-		System.out.println(actual.getName());
-			
+		snape.setHouseName("Slytherin");
+		String actual = snape.getHouseName();
+		String expected = "Slytherin";
+		
+		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void setBloodStatusTest()
 	{
 		snape = new Person("Severus Snape");
-		snape.setBloodStatus(BloodStatus.Half_blood);
-		BloodStatus actual = snape.getBloodStatus();
+		snape.setBloodStatus("Half-Blood");
+		String actual = snape.getBloodStatus();
+		String expected = "Half-Blood";
 		
-		System.out.println(actual);
-		
+		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void setSchoolTest()
 	{
 		snape = new Person("Severus Snape");
-		School school = new School("Hogwarts");
-		snape.setSchool(school);
-		School actual = snape.getSchool();
-	
-		System.out.println(actual.getName());
+		snape.setSchool("Hogwarts");
+		String actual = snape.getSchool();
+		String expected = "Hogwarts";
 		
+		Assert.assertEquals(expected, actual);
 	}
 
 }

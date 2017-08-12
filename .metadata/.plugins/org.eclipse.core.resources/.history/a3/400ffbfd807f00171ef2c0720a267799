@@ -32,7 +32,7 @@ public class PersonTest {
 		House actual = snape.getHouseName();
 		String expected = "Slytherin";
 		
-		Assert.assertEquals(expected, actual.getName());
+		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void getBloodStatusTest() throws ParseException
