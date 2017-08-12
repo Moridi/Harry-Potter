@@ -2,12 +2,19 @@ package tests;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Vector;
 
 import org.junit.Assert;
 import org.junit.Test;
 
+import entities.FinishedCourse;
+import entities.Person;
 import entities.Professor;
+import entities.Student;
 import entities.Course;
+
+//private Map<Integer, Course> courses;
+//private String notes;
 
 public class ProfessorTest {
 	@Test

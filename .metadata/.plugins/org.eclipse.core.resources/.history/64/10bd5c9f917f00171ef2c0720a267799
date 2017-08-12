@@ -9,6 +9,9 @@ import org.junit.Test;
 import entities.Professor;
 import entities.Course;
 
+//private Map<Integer, Course> courses;
+//private String notes;
+
 public class ProfessorTest {
 	@Test
 	public void coursesTest() 
