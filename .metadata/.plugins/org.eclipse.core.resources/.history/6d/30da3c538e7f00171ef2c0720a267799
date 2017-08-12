@@ -1,0 +1,50 @@
+package tests;
+
+import java.util.Map;
+import java.util.Vector;
+
+
+import org.junit.Test;
+
+import entities.FinishedCourse;
+import entities.Professor;
+import entities.Student;
+import entities.Course;
+
+//private Map<Integer, Course> courses;
+//private String notes;
+
+public class ProfessorTest {
+	@Test
+	public void coursesTest() 
+	{
+		Course course = new Course("flying");
+		Map<Integer, Course> courses;
+		courses.put(0, course);
+		Professor prof = new Professor("Madame Hooch");
+		
+	}
+
+	@Test
+	public void getNameTest() {
+		Student student = new Student("Harry Potter");
+		
+		String actual = student.getName();
+		System.out.println(actual);	
+	}
+	
+	@Test
+	public void getAndSetReportCardTest() {
+		Vector<FinishedCourse> courses = new Vector<FinishedCourse> ();
+		courses.add(new FinishedCourse("Flying"));
+		Student harryPotter = new Student ("Harry Potter");
+		harryPotter.setReportCard(courses);
+		Vector<FinishedCourse> actual = harryPotter.getReportCard();
+		
+		for(FinishedCourse x:actual)
+		{
+			System.out.println(x.toString());			
+		}
+	}
+}
+
