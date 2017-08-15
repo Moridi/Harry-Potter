@@ -19,16 +19,10 @@ import entities.*;
 			Assert.assertEquals(expected, actual);			
 		}		
 		@Test
-		public void setAndGetCourseTest() {
+		public void CourseTest() {
 			Course flying = new Course("flying");
 			CourseService fly = new CourseService(flying);
-			Course flyiing = new Course("flyiiing");
-			fly.setCourse(flyiing);
-			
+			Course flying = new Course("flyiiing");
 			Course flyi = fly.getCourse();
-			
-			String actual = flyi.getName();
-			String expected = "flyiiing";
-			Assert.assertEquals(expected, actual);	
 		}
 }

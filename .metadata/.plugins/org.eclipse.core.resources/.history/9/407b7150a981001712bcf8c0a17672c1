@@ -8,14 +8,6 @@ public class CourseService {
 		public CourseService(Course course) {
 			this.course = course;
 		}
-
-		public Course getCourse() {
-			return course;
-		}
-
-		public void setCourse(Course _course) {
-			course = _course;
-		}
 		
 		
 }

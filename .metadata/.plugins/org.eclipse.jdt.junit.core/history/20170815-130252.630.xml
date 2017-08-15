@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="SchoolServiceTest" project="Harry-Potter" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="seviceTest.SchoolServiceTest" time="0.001">
-    <testcase name="constructorTest" classname="seviceTest.SchoolServiceTest" time="0.001"/>
-    <testcase name="questionsTest" classname="seviceTest.SchoolServiceTest" time="0.0"/>
-  </testsuite>
-</testrun>

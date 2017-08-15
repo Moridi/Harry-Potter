@@ -26,8 +26,6 @@ import entities.*;
 			fly.setCourse(flyiing);
 			
 			Course flyi = fly.getCourse();
-			
-			String actual = flyi.getName();
 			String expected = "flyiiing";
 			Assert.assertEquals(expected, actual);	
 		}
