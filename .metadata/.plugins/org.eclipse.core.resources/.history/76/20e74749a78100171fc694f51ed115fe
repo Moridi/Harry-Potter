@@ -152,7 +152,6 @@ public class SchoolService {
 			int n = reader.nextInt();
 			sum += n;	
 		}
-		
 		if(sum < 24)
 			return new House("Slytherin");
 		else if (sum > 43)

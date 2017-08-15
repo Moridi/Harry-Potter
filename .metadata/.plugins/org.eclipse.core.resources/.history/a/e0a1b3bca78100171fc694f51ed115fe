@@ -13,7 +13,5 @@ public class StudentService {
 	
 	public void sortToHouse(House house){
 		Vector<Student> students = house.getStudents();
-		students.add(student);
-		house.setStudents(students);
 	}
 }

@@ -1,8 +1,7 @@
 package service;
 
-import java.util.Vector;
-
-import entities.*;
+import entities.Student;
+import entities.House;
 
 public class StudentService {
 	private Student student;
@@ -12,8 +11,5 @@ public class StudentService {
 	}
 	
 	public void sortToHouse(House house){
-		Vector<Student> students = house.getStudents();
-		students.add(student);
-		house.setStudents(students);
 	}
 }
