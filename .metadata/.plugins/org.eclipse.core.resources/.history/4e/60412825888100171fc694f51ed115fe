@@ -1,0 +1,15 @@
+package seviceTest;
+
+import java.util.Vector;
+
+import org.junit.Test;
+
+import entities.FinishedCourse;
+import entities.Student;
+import entities.Course;
+
+	public class StudentServiceTest {
+		Student harry;
+
+		@Test
+}

@@ -1,0 +1,21 @@
+package seviceTest;
+
+import java.util.Vector;
+
+import org.junit.Test;
+
+import entities.FinishedCourse;
+import entities.Grade;
+import entities.Professor;
+import entities.Student;
+import entities.Course;
+
+	public class StudentServiceTest {
+		@Test
+		public void getProfessorTest() {
+			Professor prof = new Professor("Madame Hooch");
+			flying = new Course("flying", prof, Grade.O, 1996);
+			Professor actual = flying.getProfessorName();
+			System.out.println(actual.toString());			
+			
+}

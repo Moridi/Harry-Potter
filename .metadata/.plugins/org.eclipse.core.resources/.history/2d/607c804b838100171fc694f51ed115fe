@@ -1,0 +1,7 @@
+package service;
+
+import entities.Student;
+
+public class StudentService {
+	
+}

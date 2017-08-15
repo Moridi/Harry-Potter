@@ -1,0 +1,11 @@
+package service;
+
+import entities.Student;
+import entities.House;
+
+public class StudentService {
+	private Student student;
+	private void sortToHouse(House house){
+		
+	}
+}
