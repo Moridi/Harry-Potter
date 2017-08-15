@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Harry-Potter" project="Harry-Potter" tests="39" started="39" failures="0" errors="0" ignored="0">
+  <testsuite name="tests.FinishedCourseTest" time="0.0">
+    <testcase name="getGradeTest" classname="tests.FinishedCourseTest" time="0.0"/>
+    <testcase name="setGradeTest" classname="tests.FinishedCourseTest" time="0.0"/>
+    <testcase name="getPassedTest" classname="tests.FinishedCourseTest" time="0.0"/>
+    <testcase name="setPassedTest" classname="tests.FinishedCourseTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="seviceTest.StudentServiceTest" time="0.0">
+    <testcase name="ConstructorTest" classname="seviceTest.StudentServiceTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="tests.HouseTest" time="0.0">
+    <testcase name="qualitiesTest" classname="tests.HouseTest" time="0.0"/>
+    <testcase name="getAndSetProfessorTest" classname="tests.HouseTest" time="0.0"/>
+    <testcase name="studentsTest" classname="tests.HouseTest" time="0.0"/>
+    <testcase name="getAndSetSchoolTest" classname="tests.HouseTest" time="0.0"/>
+    <testcase name="getAndSetNameTest" classname="tests.HouseTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="tests.SchoolTest" time="0.004">
+    <testcase name="setHousesTest" classname="tests.SchoolTest" time="0.0"/>
+    <testcase name="setStudentsTest" classname="tests.SchoolTest" time="0.0"/>
+    <testcase name="getCoursesTest" classname="tests.SchoolTest" time="0.003"/>
+    <testcase name="getNameTest" classname="tests.SchoolTest" time="0.001"/>
+    <testcase name="getProfessorsTest" classname="tests.SchoolTest" time="0.0"/>
+    <testcase name="getStudentsTest" classname="tests.SchoolTest" time="0.0"/>
+    <testcase name="getHousesTest" classname="tests.SchoolTest" time="0.0"/>
+    <testcase name="setCoursesTest" classname="tests.SchoolTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="seviceTest.SchoolServiceTest" time="0.0">
+    <testcase name="ConstructorTest" classname="seviceTest.SchoolServiceTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="tests.StudentTest" time="0.0">
+    <testcase name="getAndSetReportCardTest" classname="tests.StudentTest" time="0.0"/>
+    <testcase name="getNameTest" classname="tests.StudentTest" time="0.0"/>
+    <testcase name="coursesTest" classname="tests.StudentTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="tests.CourseTest" time="0.002">
+    <testcase name="setProfessorTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="getMinGradeTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="setNameTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="getNameTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="studentsTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="getProfessorTest" classname="tests.CourseTest" time="0.002"/>
+  </testsuite>
+  <testsuite name="tests.ProfessorTest" time="0.0">
+    <testcase name="getNoteTest" classname="tests.ProfessorTest" time="0.0"/>
+    <testcase name="coursesTest" classname="tests.ProfessorTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="seviceTest.CourseServiceTest" time="0.0">
+    <testcase name="ConstructorTest" classname="seviceTest.CourseServiceTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="tests.PersonTest" time="0.002">
+    <testcase name="setHouseTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="setNameTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="getSchoolTest" classname="tests.PersonTest" time="0.001"/>
+    <testcase name="getNameTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="getBloodStatusTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="setSchoolTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="setBloodStatusTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="getHouseTest" classname="tests.PersonTest" time="0.001"/>
+  </testsuite>
+</testrun>

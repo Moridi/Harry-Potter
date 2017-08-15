@@ -27,7 +27,7 @@ public class HouseTest {
 		
 		for(Student x:actual)
 		{
-			System.out.println(x.getName());			
+//			System.out.println(x.getName());			
 		}
 		
 	}
@@ -47,7 +47,7 @@ public class HouseTest {
 		
 		for(String x:actual)
 		{
-			System.out.println(x);			
+//			System.out.println(x);			
 		}
 		
 	}
@@ -61,7 +61,7 @@ public class HouseTest {
 		_Ravenclaw.setSchool(school);
 		School actual = _Ravenclaw.getSchool();
 	
-		System.out.println(actual.getName());
+//		System.out.println(actual.getName());
 		
 	}
 
@@ -73,7 +73,7 @@ public class HouseTest {
 		Professor prof = new Professor("Madame Hooch");
 		_Ravenclaw.setHeadTeacher(prof);
 		Professor actual = _Ravenclaw.getHeadTeacher();
-		System.out.println(actual.getName());			
+//		System.out.println(actual.getName());			
 
 	}
 	

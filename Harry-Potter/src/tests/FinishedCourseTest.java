@@ -16,7 +16,7 @@ public class FinishedCourseTest {
 		FinishedCourse course = new FinishedCourse("Flying", Grade.O, false);
 		
 		Grade actual = course.getGrade();
-		System.out.println(actual.toString());			
+//		System.out.println(actual.toString());			
 		
 	}
 	
@@ -25,7 +25,7 @@ public class FinishedCourseTest {
 		FinishedCourse course = new FinishedCourse("Flying");
 		
 		course.setGrade(Grade.O);
-		System.out.println(course.getGrade().toString());			
+//		System.out.println(course.getGrade().toString());			
 		
 	}
 	@Test
@@ -33,7 +33,7 @@ public class FinishedCourseTest {
 		FinishedCourse course = new FinishedCourse("Flying", Grade.O, false);
 		
 		boolean actual = course.isPassed();
-		System.out.println(actual);			
+//		System.out.println(actual);			
 		
 	}
 	
@@ -42,7 +42,7 @@ public class FinishedCourseTest {
 		FinishedCourse course = new FinishedCourse("Flying");
 		
 		course.setPassed(false);
-		System.out.println(course.isPassed());			
+//		System.out.println(course.isPassed());			
 		
 	}
 	

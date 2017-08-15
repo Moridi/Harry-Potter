@@ -43,7 +43,7 @@ public class PersonTest {
 		
 		BloodStatus actual = snape.getBloodStatus();
 		
-		System.out.println(actual);
+//		System.out.println(actual);
 		
 	}
 	@Test
@@ -54,7 +54,7 @@ public class PersonTest {
 		snape = new Person("Severus Snape", house, BloodStatus.Half_blood, school, "9-01-1960");
 		School actual = snape.getSchool();
 		
-		System.out.println(actual.getName());
+//		System.out.println(actual.getName());
 	}
 	@Test
 	public void setNameTest()
@@ -74,7 +74,7 @@ public class PersonTest {
 		snape.setHouseName(house);
 		House actual = snape.getHouseName();
 	
-		System.out.println(actual.getName());
+//		System.out.println(actual.getName());
 			
 	}
 	@Test
@@ -84,7 +84,7 @@ public class PersonTest {
 		snape.setBloodStatus(BloodStatus.Half_blood);
 		BloodStatus actual = snape.getBloodStatus();
 		
-		System.out.println(actual);
+//		System.out.println(actual);
 		
 	}
 	@Test
@@ -95,7 +95,7 @@ public class PersonTest {
 		snape.setSchool(school);
 		School actual = snape.getSchool();
 	
-		System.out.println(actual.getName());
+//		System.out.println(actual.getName());
 		
 	}
 

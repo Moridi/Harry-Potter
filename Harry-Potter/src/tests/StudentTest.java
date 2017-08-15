@@ -24,7 +24,7 @@ public class StudentTest {
 		
 		for(Course x: actual)
 		{
-			System.out.println(x.getName());
+//			System.out.println(x.getName());
 		}
 		
 	}
@@ -34,7 +34,7 @@ public class StudentTest {
 		Student student = new Student("Harry Potter");
 		
 		String actual = student.getName();
-		System.out.println(actual);	
+//		System.out.println(actual);	
 	}
 	
 	@Test
@@ -47,7 +47,7 @@ public class StudentTest {
 		
 		for(FinishedCourse x:actual)
 		{
-			System.out.println(x.toString());			
+//			System.out.println(x.toString());			
 		}
 	}
 }

@@ -22,7 +22,7 @@ public class CourseTest {
 		flying.setStudentNames(students);
 		
 		Vector<Student> actual = flying.getStudentNames();
-		System.out.println(actual.toString());			
+//		System.out.println(actual.toString());			
 
 		
 	}
@@ -31,7 +31,7 @@ public class CourseTest {
 		Professor prof = new Professor("Madame Hooch");
 		flying = new Course("flying", prof, Grade.O, 1996);
 		Professor actual = flying.getProfessorName();
-		System.out.println(actual.toString());			
+//		System.out.println(actual.toString());			
 		
 	}
 	@Test
@@ -39,14 +39,14 @@ public class CourseTest {
 		Professor prof = new Professor("Madame Hooch");
 		flying = new Course("flying", prof, Grade.O, 1996);
 		String actual = flying.getName();
-		System.out.println(actual);	
+//		System.out.println(actual);	
 	}
 	@Test
 	public void getMinGradeTest() {
 		Professor prof = new Professor("Madame Hooch");
 		flying = new Course("flying", prof, Grade.O, 1996);
 		Grade actual = flying.getMinGrade();
-		System.out.println(actual.toString());			
+//		System.out.println(actual.toString());			
 		
 	}
 	@Test
@@ -55,7 +55,7 @@ public class CourseTest {
 		Professor prof = new Professor("Madame Hooch");
 		flying.setProfessorName(prof);
 		Professor actual = flying.getProfessorName();
-		System.out.println(actual.toString());			
+//		System.out.println(actual.toString());			
 
 	}
 	@Test
@@ -63,7 +63,7 @@ public class CourseTest {
 		flying = new Course("");
 		flying.setName("Flying");
 		String actual = flying.getName();
-		System.out.println(actual.toString());			
+//		System.out.println(actual.toString());			
 	
 	}
 }

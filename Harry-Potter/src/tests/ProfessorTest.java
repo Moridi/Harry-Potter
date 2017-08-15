@@ -26,7 +26,7 @@ public class ProfessorTest {
 		Professor prof = new Professor("Madame Hooch");
 			
 		String actual = prof.getNotes();
-		System.out.println(actual);	
+//		System.out.println(actual);	
 	}
 	
 	public void setNotesTest()

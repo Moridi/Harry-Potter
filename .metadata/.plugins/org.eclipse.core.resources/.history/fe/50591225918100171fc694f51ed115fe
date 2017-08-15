@@ -1,0 +1,22 @@
+package seviceTest;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import entities.*;
+
+	public class SchoolServiceTest {
+		School gryff = new School("Gryffindor");
+		@Test
+		public void constructorTest() {	
+			String actual = gryff.getName();
+			String expected = "Gryffindor";
+			Assert.assertEquals(expected, actual);			
+		}	
+		@Test
+		public void questionsTest() {
+			Student harry = new Student("Harry Potter");
+			gryff.sortingHat();
+			
+		}
+}

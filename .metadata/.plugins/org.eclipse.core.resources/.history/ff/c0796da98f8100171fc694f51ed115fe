@@ -1,0 +1,33 @@
+package service;
+
+import java.util.Vector;
+
+import entities.School;
+import entities.Student;
+import entities.House;
+
+public class SchoolService {
+	private School school;
+	private Vector<String> questions;
+	
+	public SchoolService(School school) {
+		this.school = school;
+		questions.add("1.) You are given a test at school that has"
+				+ " questions that teacher hasn't covered yet. "
+				+ "In the middle of the test you notice that your friend next to you has"
+				+ " a cheat-sheet. The teacher doesn't notice.\nAsk to share the cheat-sheet."
+				+ " This test isn't fair, so why should you be?\n1- Good for them, they beat "
+				+ "the system.\n2- Confront them after the test and try to convince them not to"
+				+ " cheat anymore. You don't want them to get in trouble.\n3- Confront them after"
+				+ " the test and force them to tell the teacher they cheated, or you will tell on them."
+				+ " They must pay for their misdeeds.\n4- Inform the teacher right in the middle of class"
+				+ " that they are cheating. Cheaters never prosper!");
+	}
+
+
+
+	public House sortintHat(Student student){
+		
+		return null;
+	}
+}

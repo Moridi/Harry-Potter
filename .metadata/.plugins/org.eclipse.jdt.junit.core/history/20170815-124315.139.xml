@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Harry-Potter" project="Harry-Potter" tests="40" started="40" failures="0" errors="2" ignored="0">
+  <testsuite name="tests.FinishedCourseTest" time="0.002">
+    <testcase name="getGradeTest" classname="tests.FinishedCourseTest" time="0.001"/>
+    <testcase name="setGradeTest" classname="tests.FinishedCourseTest" time="0.0"/>
+    <testcase name="getPassedTest" classname="tests.FinishedCourseTest" time="0.0"/>
+    <testcase name="setPassedTest" classname="tests.FinishedCourseTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="seviceTest.StudentServiceTest" time="0.0">
+    <testcase name="ConstructorTest" classname="seviceTest.StudentServiceTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="tests.HouseTest" time="0.002">
+    <testcase name="qualitiesTest" classname="tests.HouseTest" time="0.001"/>
+    <testcase name="getAndSetProfessorTest" classname="tests.HouseTest" time="0.0"/>
+    <testcase name="studentsTest" classname="tests.HouseTest" time="0.001"/>
+    <testcase name="getAndSetSchoolTest" classname="tests.HouseTest" time="0.0"/>
+    <testcase name="getAndSetNameTest" classname="tests.HouseTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="tests.SchoolTest" time="0.004">
+    <testcase name="setHousesTest" classname="tests.SchoolTest" time="0.002"/>
+    <testcase name="setStudentsTest" classname="tests.SchoolTest" time="0.0"/>
+    <testcase name="getCoursesTest" classname="tests.SchoolTest" time="0.001"/>
+    <testcase name="getNameTest" classname="tests.SchoolTest" time="0.0"/>
+    <testcase name="getProfessorsTest" classname="tests.SchoolTest" time="0.0"/>
+    <testcase name="getStudentsTest" classname="tests.SchoolTest" time="0.0"/>
+    <testcase name="getHousesTest" classname="tests.SchoolTest" time="0.0"/>
+    <testcase name="setCoursesTest" classname="tests.SchoolTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="seviceTest.SchoolServiceTest" time="0.051">
+    <testcase name="constructorTest" classname="seviceTest.SchoolServiceTest" time="0.051">
+      <error>java.lang.NullPointerException
+	at service.SchoolService.&lt;init&gt;(SchoolService.java:15)
+	at seviceTest.SchoolServiceTest.&lt;init&gt;(SchoolServiceTest.java:11)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:217)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:266)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+</error>
+    </testcase>
+    <testcase name="questionsTest" classname="seviceTest.SchoolServiceTest" time="0.0">
+      <error>java.lang.NullPointerException
+	at service.SchoolService.&lt;init&gt;(SchoolService.java:15)
+	at seviceTest.SchoolServiceTest.&lt;init&gt;(SchoolServiceTest.java:11)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:217)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:266)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="tests.StudentTest" time="0.003">
+    <testcase name="getAndSetReportCardTest" classname="tests.StudentTest" time="0.0"/>
+    <testcase name="getNameTest" classname="tests.StudentTest" time="0.0"/>
+    <testcase name="coursesTest" classname="tests.StudentTest" time="0.003"/>
+  </testsuite>
+  <testsuite name="tests.CourseTest" time="0.0">
+    <testcase name="setProfessorTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="getMinGradeTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="setNameTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="getNameTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="studentsTest" classname="tests.CourseTest" time="0.0"/>
+    <testcase name="getProfessorTest" classname="tests.CourseTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="tests.ProfessorTest" time="0.0">
+    <testcase name="getNoteTest" classname="tests.ProfessorTest" time="0.0"/>
+    <testcase name="coursesTest" classname="tests.ProfessorTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="seviceTest.CourseServiceTest" time="0.0">
+    <testcase name="ConstructorTest" classname="seviceTest.CourseServiceTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="tests.PersonTest" time="0.0">
+    <testcase name="setHouseTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="setNameTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="getSchoolTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="getNameTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="getBloodStatusTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="setSchoolTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="setBloodStatusTest" classname="tests.PersonTest" time="0.0"/>
+    <testcase name="getHouseTest" classname="tests.PersonTest" time="0.0"/>
+  </testsuite>
+</testrun>

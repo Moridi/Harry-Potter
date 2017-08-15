@@ -39,7 +39,7 @@ public class SchoolTest {
 	
 		for(Course x : actual)
 		{
-			System.out.println(x.getName());
+//			System.out.println(x.getName());
 		}
 	}
 	@Test
@@ -55,7 +55,7 @@ public class SchoolTest {
 		
 		for(House x : actual)
 		{
-			System.out.println(x.getName());
+//			System.out.println(x.getName());
 		}
 		
 	}
@@ -71,7 +71,7 @@ public class SchoolTest {
 		
 		for(Student x : actual)
 		{
-			System.out.println(x.getName());
+//			System.out.println(x.getName());
 		}
 	
 	}
@@ -88,7 +88,7 @@ public class SchoolTest {
 
 		for(Professor x: actual)
 		{
-			System.out.println(x.getName());
+//			System.out.println(x.getName());
 		}
 	}
 
@@ -113,7 +113,7 @@ public class SchoolTest {
 	
 		for(Course x: actual)
 		{
-			System.out.println(x.getName());
+//			System.out.println(x.getName());
 		}
 	}
 	@Test
@@ -130,7 +130,7 @@ public class SchoolTest {
 		
 		for(House x:actual)
 		{
-			System.out.println(x);
+//			System.out.println(x);
 		}
 	}
 	@Test
@@ -146,7 +146,7 @@ public class SchoolTest {
 	
 		for(Student x:actual)
 		{
-			System.out.println(x.getName());
+//			System.out.println(x.getName());
 		}
 	}
 
