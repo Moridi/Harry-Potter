@@ -2,7 +2,6 @@ package service;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.Vector;
 
 import entities.*;
@@ -34,7 +33,7 @@ public class PersonService {
 		allPersons = new Vector<Person>();
 	}
 
-	public void getData(String fileName) throws IOException /* implement this method such that you will
+	public void getData(String fileName) /* implement this method such that you will
 	receive the file name (PersonDB.txt) as an input and inside the method you
 	will open that file, read it and will fill up the information for each person (fill the
 	vector)*/
@@ -52,16 +51,29 @@ public class PersonService {
         	House house = new House(houseName);
         	
         	String _bloodStatus = br.readLine();
-        	BloodStatus bloodStatus = BloodStatus.valueOf(_bloodStatus);
+        	BloodStatus bloodStatus = Grade.valueOf(_bloodStatus);
         	
-        	String schoolName = br.readLine();
-        	School school = new School(schoolName);
+        	String professorName = br.readLine();
+        	Professor professor = new Professor(professorName);
         	
-        	String birthday = br.readLine();
+        	String _year = br.readLine();
+        	int year = Integer.parseInt(_year); 
+        			
+        	String numberOfStudents = br.readLine();
+        	int numOfStudents = Integer.parseInt(numberOfStudents);
         	
-        	Person newPerson = new Person(personName, house, bloodStatus, school,  birthday);
+        	Vector<Student> students = new Vector<Student>();
         	
-        	allPersons.add(newPerson);
+        	for(int i = 0; i < numOfStudents; i++){
+        		String studentName = br.readLine();
+        		students.add(new Student(studentName));    		
+        	}
+        	
+        	Course newCourse = new Course(courseName, professor, minGrade, year);
+        	
+        	newCourse.setStudentNames(students);
+        	
+        	allCourses.add(newCourse);
         		    
         	s = br.readLine();	
         }  

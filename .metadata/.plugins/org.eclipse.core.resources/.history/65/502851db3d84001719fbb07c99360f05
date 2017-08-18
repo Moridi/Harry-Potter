@@ -2,7 +2,6 @@ package service;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.Vector;
 
 import entities.*;
@@ -34,7 +33,7 @@ public class PersonService {
 		allPersons = new Vector<Person>();
 	}
 
-	public void getData(String fileName) throws IOException /* implement this method such that you will
+	public void getData(String fileName) /* implement this method such that you will
 	receive the file name (PersonDB.txt) as an input and inside the method you
 	will open that file, read it and will fill up the information for each person (fill the
 	vector)*/
@@ -60,8 +59,9 @@ public class PersonService {
         	String birthday = br.readLine();
         	
         	Person newPerson = new Person(personName, house, bloodStatus, school,  birthday);
+        	newCourse.setStudentNames(students);
         	
-        	allPersons.add(newPerson);
+        	allCourses.add(newCourse);
         		    
         	s = br.readLine();	
         }  

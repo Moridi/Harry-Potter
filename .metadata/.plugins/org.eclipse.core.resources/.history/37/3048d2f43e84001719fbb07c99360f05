@@ -33,8 +33,8 @@ public class Person
 
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", houseName=" + houseName.getName() + ", bloodStatus=" + bloodStatus.toString() + ", school="
-				+ school.getName() + ", birthday=" + birthday + "]";
+		return "Person [name=" + name + ", houseName=" + houseName + ", bloodStatus=" + bloodStatus + ", school="
+				+ school + ", birthday=" + birthday + "]";
 	}
 
 	//Setters and getters

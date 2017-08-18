@@ -1,0 +1,26 @@
+package seviceTest;
+
+import java.io.IOException;
+import java.util.Vector;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import entities.House;
+import service.HouseService;
+
+public class PersonServiceTest {
+	@Test
+	public void getHouseDataTest() throws IOException{
+		House Rave = new House("Ravenclaw");
+		HouseService ravenclaw = new HouseService(Rave);
+		
+		ravenclaw.getData("HouseDB.txt");
+		
+		Vector<House> allHouses = ravenclaw.getAllHouses();
+		String actual = allHouses.get(0).toString();
+		String expected = "House [name=Ravenclaw, school=Hogwarts]";
+		Assert.assertEquals(expected, actual);	
+	
+	}
+}
