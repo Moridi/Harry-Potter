@@ -8,7 +8,6 @@ import entities.*;
 public class HouseService {
 
 	private House house; //The house the services are perform on/at
-	private Vector<House> allHouses; //All the houses in the system
 	
 	public House getHouse() {
 		return house;
@@ -19,15 +18,16 @@ public class HouseService {
 
 	public HouseService(House house) {
 		this.house = house;
-		allHouses = new Vector<House>();
 	}
 
+	private Vector<House> allHouses; //All the houses in the system
+	
 	public Vector<House> getAllHouses() {
 		return allHouses;
 	}
 
-	public void setAllHouses(Vector<House> _allHouses) {
-		allHouses = _allHouses;
+	public void setAllHouses(Vector<House> allHouses) {
+		this.allHouses = allHouses;
 	}
 
 	public void getData(String fileName) throws IOException /* implement this method such that you will
@@ -45,8 +45,11 @@ public class HouseService {
         	String houseName = s;
         	
         	String schoolName = br.readLine();
-        	School school = new School(schoolName);
-
+        	School school = new Professor(schoolName);
+        	
+        	String _year = br.readLine();
+        	int year = Integer.parseInt(_year); 
+        			
         	String numberOfStudents = br.readLine();
         	int numOfStudents = Integer.parseInt(numberOfStudents);
         	
@@ -56,8 +59,13 @@ public class HouseService {
         		String studentName = br.readLine();
         		students.add(new Student(studentName));    		
         	}
-        	House newHouse = new House(houseName, school, students);
-        	allHouses.add(newHouse);
+        	
+        	Course newCourse = new Course(courseName, professor, minGrade, year);
+        	
+        	newCourse.setStudentNames(students);
+        	
+//        	allCourses.add(newCourse);
+        		    
         	s = br.readLine();	
         }  
         freader.close(); 

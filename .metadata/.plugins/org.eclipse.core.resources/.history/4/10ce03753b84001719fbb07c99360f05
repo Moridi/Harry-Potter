@@ -19,15 +19,14 @@ public class HouseService {
 
 	public HouseService(House house) {
 		this.house = house;
-		allHouses = new Vector<House>();
 	}
 
 	public Vector<House> getAllHouses() {
 		return allHouses;
 	}
 
-	public void setAllHouses(Vector<House> _allHouses) {
-		allHouses = _allHouses;
+	public void setAllHouses(Vector<House> allHouses) {
+		this.allHouses = allHouses;
 	}
 
 	public void getData(String fileName) throws IOException /* implement this method such that you will
@@ -39,26 +38,35 @@ public class HouseService {
         BufferedReader br = new BufferedReader(freader);  
         String s;  
         while((s = br.readLine()) != null) {
+        	System.out.println(s);
         	if(s.equals("$")){
         		break;
         	}
+        	System.out.println(s + " after if ");
         	String houseName = s;
         	
         	String schoolName = br.readLine();
         	School school = new School(schoolName);
+        	System.out.println(schoolName);
 
         	String numberOfStudents = br.readLine();
+        	System.out.println(numberOfStudents);
         	int numOfStudents = Integer.parseInt(numberOfStudents);
         	
         	Vector<Student> students = new Vector<Student>();
         	
         	for(int i = 0; i < numOfStudents; i++){
         		String studentName = br.readLine();
+        		System.out.println(studentName);
         		students.add(new Student(studentName));    		
         	}
+        	
         	House newHouse = new House(houseName, school, students);
+        	
         	allHouses.add(newHouse);
+        		    
         	s = br.readLine();	
+        	System.out.println(s);
         }  
         freader.close(); 
 	}
