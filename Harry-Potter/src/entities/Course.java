@@ -25,8 +25,7 @@ public class Course
 	
 	@Override
 	public String toString() {
-		return "Course [name=" + name + ", professorName=" + professorName + ", studentNames=" + studentNames
-				+ ", minGrade=" + minGrade + ", year=" + year + "]";
+		return "Course [name=" + name + ", professorName=" + professorName.getName() + ", minGrade=" + minGrade + ", year=" + year + "]";
 	}
 
 	public Course(String _name, Professor _professorName, Grade _minGrade, int _year)

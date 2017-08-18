@@ -1,6 +1,6 @@
 package service;
 
-import entities.Course;
+import entities.*;
 
 import java.util.Vector;
 import java.io.*;
@@ -19,20 +19,51 @@ public class CourseService {
 	        FileReader freader = new FileReader(fileName);  
 	        BufferedReader br = new BufferedReader(freader);  
 	        String s;  
-	        while((s = br.readLine()) != null) {  
-	        System.out.println(s);  
+	        while((s = br.readLine()) != null) {
+	        	if(s.equals("$")){
+	        		break;
+	        	}
+	        	String courseName = s;
+	        	
+	        	String _minGrade = br.readLine();
+	        	Grade minGrade = Grade.valueOf(_minGrade);
+	        	
+	        	String professorName = br.readLine();
+	        	Professor professor = new Professor(professorName);
+	        	
+	        	String _year = br.readLine();
+	        	int year = Integer.parseInt(_year); 
+	        			
+	        	String numberOfStudents = br.readLine();
+	        	int numOfStudents = Integer.parseInt(numberOfStudents);
+	        	
+	        	Vector<Student> students = new Vector<Student>();
+	        	
+	        	for(int i = 0; i < numOfStudents; i++){
+	        		String studentName = br.readLine();
+	        		students.add(new Student(studentName));    		
+	        	}
+	        	
+	        	Course newCourse = new Course(courseName, professor, minGrade, year);
+	        	
+	        	newCourse.setStudentNames(students);
+	        	
+	        	allCourses.add(newCourse);
+	        		    
+	        	s = br.readLine();	
 	        }  
 	        freader.close(); 
 		}
 		
+		public CourseService(Course course) {
+			this.course = course;
+			allCourses = new Vector<Course>();
+		}
+
 		public void setData()/* implement this method so you can fill
 		your database using the vector of courses you have */
 		{
 			
-		}
-		
-		public CourseService(Course course) {
-			this.course = course;
 		}
 
 		public Course getCourse() {

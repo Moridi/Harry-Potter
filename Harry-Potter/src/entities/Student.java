@@ -2,23 +2,24 @@ package entities;
 
 import java.util.Vector;
 
-public class Student {
-	
-	private String name;
+
+public class Student extends Person{
+
 	private Vector<Course> courses;
 	private Vector<FinishedCourse> reportCard;
 	
 	// Constructors
 	
 	
-	public Student(String name, Vector<Course> courses, Vector<FinishedCourse> reportCard) {
-		this.name = name;
+	public Student(String _name, House _houseName, BloodStatus _bloodStatus,
+			School _school, String _birthday, Vector<Course> courses, Vector<FinishedCourse> reportCard) {
+		super(_name, _houseName, _bloodStatus, _school, _birthday);
 		this.courses = courses;
 		this.reportCard = reportCard;
 	}
 	
 	public Student(String name){
-		this.name = name;
+		super(name);
 		this.courses = null;
 		this.reportCard = null;
 	}
@@ -33,13 +34,6 @@ public class Student {
 	
 	public Vector<Course> getCourses() {
 		return courses;
-	}
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String _name) {
-		name = _name;
 	}
 
 	public void setCourses(Vector<Course> _courses) {

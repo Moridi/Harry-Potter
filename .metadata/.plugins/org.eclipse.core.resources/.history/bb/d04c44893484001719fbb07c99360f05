@@ -1,0 +1,85 @@
+package service;
+
+import entities.*;
+
+import java.util.Vector;
+import java.io.*;
+
+public class CourseService {
+		private Course course;//The course the services are performed on/at
+		private Vector<Course> allCourses;//All the courses in the system
+
+		
+		public void getData(String fileName) throws IOException
+		/* implement this method such that you will
+		receive the file name (courseDB.txt) as an input and inside the method you
+		will open that file, read it and will fill up the information for each course (fill the
+		vector)*/
+		{
+	        FileReader freader = new FileReader(fileName);  
+	        BufferedReader br = new BufferedReader(freader);  
+	        String s;  
+	        while((s = br.readLine()) != null && s != "$") {
+	        
+	        	if(s == "*")
+	        		continue;
+	        	String courseName = s;
+	        	
+	        	String _minGrade = br.readLine();
+//	        	Grade minGrade = Grade.valueOf(_minGrade);
+	        	
+	        	String professorName = br.readLine();
+	        	Professor professor = new Professor(professorName);
+	        	
+	        	String _year = br.readLine();
+//	        	int year = Integer.parseInt(_year); 
+	        			
+	        	String numberOfStudents = br.readLine();
+//	        	int numOfStudents = Integer.parseInt(numberOfStudents);
+	        	
+	        	Vector<Student> students = new Vector<Student>();
+	        	
+//	        	for(int i = 0; i < numOfStudents; i++){
+	        		String studentName = br.readLine();
+	        		students.add(new Student(studentName));    		
+//	        	}
+	        	
+/*	        	Course newCourse = new Course(courseName, professor, minGrade, year);
+	        	
+	        	newCourse.setStudentNames(students);
+	        	
+	        	allCourses.add(newCourse);
+	        	
+*/	        }  
+	        freader.close(); 
+		}
+		
+		public CourseService(Course course) {
+			this.course = course;
+			allCourses = new Vector<Course>();
+		}
+
+		public void setData()/* implement this method so you can fill
+		your database using the vector of courses you have */
+		{
+			
+		}
+
+		public Course getCourse() {
+			return course;
+		}
+
+		public void setCourse(Course _course) {
+			course = _course;
+		}
+
+		public Vector<Course> getAllCourses() {
+			return allCourses;
+		}
+
+		public void setAllCourses(Vector<Course> _allCourses) {
+			allCourses = _allCourses;
+		}
+		
+		
+}
