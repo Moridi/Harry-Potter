@@ -2,14 +2,61 @@ package service;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Vector;
 
 import entities.School;
 import entities.Student;
 import entities.House;
 
 public class SchoolService {
-	private School school;
+	private School school;//The school the services are performed on/at
 	private ArrayList<String> questions;
+	
+	private Vector<School> allSchools; //All the schools in the system
+	
+	public void getData(String fileName)/* implement this method such that you will
+	receive the file name (schoolDB.txt) as an input and inside the method you
+	will open that file, read it and will fill up the information for each course (fill the
+	vector)*/
+	{
+		
+	}
+	
+	public void setData()/* implement this method so you can fill
+	your database using the vector of courses you have */
+	{
+		
+	}
+	
+	public House sortintHat(Student student){
+		int sum = 0;
+		
+		for( String question:questions)
+		{
+			System.out.println(question);
+			Scanner reader = new Scanner(System.in);
+			int n = reader.nextInt();
+			sum += n;	
+		}
+		
+		if(sum < 24)
+			return new House("Slytherin");
+		else if (sum > 43)
+			return new House("Ravenclaw");
+		else if (sum > 36)
+			return new House("Gryffindor");
+		else 
+			return new House("Hufflepuff");
+	}
+
+	public School getSchool() {
+		return school;
+	}
+
+	public void setSchool(School _school) {
+		school = _school;
+	}
+	
 	
 	public SchoolService(School school) {
 		this.school = school;
@@ -138,36 +185,5 @@ public class SchoolService {
 		
 		questions.add(temp);
 		
-	}
-
-
-
-	public House sortintHat(Student student){
-		int sum = 0;
-		
-		for( String question:questions)
-		{
-			System.out.println(question);
-			Scanner reader = new Scanner(System.in);
-			int n = reader.nextInt();
-			sum += n;	
-		}
-		
-		if(sum < 24)
-			return new House("Slytherin");
-		else if (sum > 43)
-			return new House("Ravenclaw");
-		else if (sum > 36)
-			return new House("Gryffindor");
-		else 
-			return new House("Hufflepuff");
-	}
-
-	public School getSchool() {
-		return school;
-	}
-
-	public void setSchool(School _school) {
-		school = _school;
 	}
 }
