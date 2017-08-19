@@ -48,7 +48,7 @@ public class StudentService {
         	
         	Student newStudent = new Student(personName, house, bloodStatus, school,  birthday, courses);
         	
-        	allStudents.add(newStudent);
+        	allProfessors.add(newProfessor);
         		    
         	s = br.readLine();
         }  

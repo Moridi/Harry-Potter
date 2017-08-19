@@ -27,13 +27,13 @@ import service.*;
 			
 			harryPotter.getData("StudentDB.txt");
 			
-			Vector<Student> allStudents = harryPotter.getAllStudents();
-			String actual = allStudents.get(1).toString();
-			
-			String expected = "Student [Person=Person [name=Harry Potter,"
-					+ " houseName=Gryffindor, bloodStatus=Pure_blood,"
-					+ " school=Hogwarts, birthday=01.07.1997],"
-					+ " courses=6]";
+			Vector<Professor> allProfessors = severus.getAllProfessors();
+			String actual = allProfessors.get(0).toString();
+			String expected = "Professor [person=Person [name=Severus Snape,"
+					+ " houseName=Slytherin, bloodStatus=Half_blood,"
+					+ " school=Hogwarts, birthday=09.01.1960],"
+					+ " notes=He was the bravest man whom ever lived."
+					+ " A death eater spy. A.K.A. The Half Blood Prince]";
 			Assert.assertEquals(expected, actual);	
 		
 		}

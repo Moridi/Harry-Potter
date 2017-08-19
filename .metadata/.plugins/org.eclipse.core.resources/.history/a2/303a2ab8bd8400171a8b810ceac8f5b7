@@ -3,6 +3,8 @@ package service;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Vector;
 
 import entities.*;
@@ -45,19 +47,15 @@ public class StudentService {
         		String courseName = br.readLine();
         		courses.add(new Course(courseName));    		
         	}
-        	
-        	Student newStudent = new Student(personName, house, bloodStatus, school,  birthday, courses);
-        	
-        	allStudents.add(newStudent);
-        		    
         	s = br.readLine();
+        	
         }  
         freader.close(); 
 	}
 	
 	public StudentService(Student _student) {
 		student = _student;
-		allStudents = new Vector<Student>();
+		allStudents = new Vector<Student>;
 	}
 
 	public void setData()/* implement this method so you can fill

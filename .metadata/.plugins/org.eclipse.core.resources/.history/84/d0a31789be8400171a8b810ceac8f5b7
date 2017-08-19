@@ -30,10 +30,12 @@ import service.*;
 			Vector<Student> allStudents = harryPotter.getAllStudents();
 			String actual = allStudents.get(1).toString();
 			
-			String expected = "Student [Person=Person [name=Harry Potter,"
-					+ " houseName=Gryffindor, bloodStatus=Pure_blood,"
-					+ " school=Hogwarts, birthday=01.07.1997],"
-					+ " courses=6]";
+			"Student [Person=" + super.toString() + " courses=" + courses.size()  + "]";
+			
+			String expected = "Student [Person=Person [name=Severus Snape,"
+					+ " houseName=Slytherin, bloodStatus=Half_blood,"
+					+ " school=Hogwarts, birthday=09.01.1960],"
+					+ " courses=" + courses.size()  + "]";
 			Assert.assertEquals(expected, actual);	
 		
 		}

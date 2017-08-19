@@ -12,9 +12,10 @@ public class Student extends Person{
 	
 	
 	public Student(String _name, House _houseName, BloodStatus _bloodStatus,
-			School _school, String _birthday, Vector<Course> courses) {
+			School _school, String _birthday, Vector<Course> courses, Vector<FinishedCourse> reportCard) {
 		super(_name, _houseName, _bloodStatus, _school, _birthday);
 		this.courses = courses;
+		this.reportCard = reportCard;
 	}
 	
 	public Student(String name){
@@ -27,7 +28,7 @@ public class Student extends Person{
 	@Override
 	public String toString() {
 		return "Student [Person=" + super.toString() + ", courses=" + courses.size()  + "]";
-	}
+	}w
 
 	//Setters and getters
 	

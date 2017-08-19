@@ -22,6 +22,8 @@ public class SchoolService {
 		allSchools = _allSchools;
 	}
 
+	
+	
 	public void getData(String fileName) throws IOException/* implement this method such that you will
 	receive the file name (schoolDB.txt) as an input and inside the method you
 	will open that file, read it and will fill up the information for each course (fill the

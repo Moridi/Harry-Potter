@@ -46,9 +46,9 @@ public class StudentService {
         		courses.add(new Course(courseName));    		
         	}
         	
-        	Student newStudent = new Student(personName, house, bloodStatus, school,  birthday, courses);
+        	Student newStudent = new Professor(personName, house, bloodStatus, school,  birthday, courses, notes);
         	
-        	allStudents.add(newStudent);
+        	allProfessors.add(newProfessor);
         		    
         	s = br.readLine();
         }  
