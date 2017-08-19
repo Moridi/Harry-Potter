@@ -1,0 +1,30 @@
+Hogwarts
+4
+Gryffindor
+Hufflepuff
+Ravenclaw
+Slytherin
+3
+Nevile Longbottom
+Luna Lovegood
+Lavender Brown
+2
+Minerva McGonagol
+Severus Snape
+2
+Flying
+Potions
+England
+*
+Durmstrang
+0
+1
+Viktor Krum
+1
+Igor Karkaroff
+1
+Flying
+Russia
+*
+$
+

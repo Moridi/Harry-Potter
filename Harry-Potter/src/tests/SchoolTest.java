@@ -34,7 +34,7 @@ public class SchoolTest {
 		courses.add(new Course("Defense Against The Dark Arts"));
 		courses.add(new Course("Transfiguration"));
 
-		hogwarts = new School("Hogwarts", null, courses, null, null, null, null);
+		hogwarts = new School("Hogwarts", null, courses, null, null, null);
 		ArrayList<Course> actual = hogwarts.getCourseNames();
 	
 		for(Course x : actual)
@@ -50,7 +50,7 @@ public class SchoolTest {
 		houses.add(new House("Hufflepuff"));
 		houses.add(new House("Ravenclaw"));
 		houses.add(new House("Slytherin"));
-		hogwarts = new School("Hogwarts", houses, null, null, null, null, null);
+		hogwarts = new School("Hogwarts", houses, null, null, null, null);
 		ArrayList<House> actual = hogwarts.getHouseNames();
 		
 		for(House x : actual)
@@ -65,15 +65,9 @@ public class SchoolTest {
 		Vector<Student> students = new Vector<Student>();
 		students.add(new Student("Harry Potter"));
 		
-		hogwarts = new School("Hogwarts", null, null, null, students, null, null);
+		hogwarts = new School("Hogwarts", null, null, null, null, null);
 		
-		Vector<Student> actual = hogwarts.getStudentNames();
-		
-		for(Student x : actual)
-		{
-//			System.out.println(x.getName());
-		}
-	
+		Vector<Student> actual = hogwarts.getStudentNames();	
 	}
 	@Test
 	public void getProfessorsTest()
@@ -82,16 +76,11 @@ public class SchoolTest {
 		ArrayList<Integer> years, Vector<String> students, Vector<String> professors)*/
 		Vector<Professor> professors = new Vector<Professor>();
 		professors.add(new Professor("Severus Snape"));
-		hogwarts = new School("Hogwarts", null, null, null, null, professors, null);
+		hogwarts = new School("Hogwarts", null, null, null, null, null);
 		
-		Vector<Professor> actual = hogwarts.getProfessorNames();
-
-		for(Professor x: actual)
-		{
-//			System.out.println(x.getName());
-		}
 	}
 
+	
 	@Test
 	public void setCoursesTest()
 	{

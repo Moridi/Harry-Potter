@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="entities.Student"/>
 <fullyQualifiedTypeName name="entities.School"/>
 <fullyQualifiedTypeName name="entities.House"/>
+<fullyQualifiedTypeName name="entities.Student"/>
+<fullyQualifiedTypeName name="java.util.StringJoiner"/>
+<fullyQualifiedTypeName name="java.util.StringTokenizer"/>
 </qualifiedTypeNameHistroy>

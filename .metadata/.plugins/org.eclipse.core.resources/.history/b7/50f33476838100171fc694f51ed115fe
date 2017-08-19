@@ -1,7 +1,0 @@
-package service;
-
-import entities.Course;
-
-public class CourseService {
-
-}

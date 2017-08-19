@@ -29,7 +29,7 @@ public class School {
 	}
 	
 	public School(String _name, ArrayList<House> _houseNames, ArrayList<Course> _courseNames, 
-			ArrayList<String> years, Vector<Student> _studentNames, Vector<Professor> _professorNames, String loc)
+			Vector<Student> _studentNames, Vector<Professor> _professorNames, String loc)
 	{	
 		name = _name;
 		houseNames = _houseNames;
@@ -53,9 +53,9 @@ public class School {
 
 	@Override
 	public String toString() {
-		return "School [name=" + name + ", numOfStudents=" + numOfStudents + ", housed=" + housed + ", houseNames="
-				+ houseNames + ", studentNames=" + studentNames + ", professorNames=" + professorNames
-				+ ", courseNames=" + courseNames + ", location=" + location + "]";
+		return "School [name=" + name + ", numOfStudents=" + numOfStudents + ", houseNames="
+				+ houseNames.size()+ ", studentNames=" + studentNames.size() + ", professorNames=" + professorNames.size()
+				+ ", courseNames=" + courseNames.size() + ", location=" + location + "]";
 	}
 
 	//Setters and getters

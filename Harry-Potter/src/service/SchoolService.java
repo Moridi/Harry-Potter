@@ -1,25 +1,94 @@
 package service;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Vector;
 
-import entities.School;
-import entities.Student;
-import entities.House;
+import entities.*;
 
 public class SchoolService {
 	private School school;//The school the services are performed on/at
-	private ArrayList<String> questions;
-	
+	private ArrayList<String> questions;	
 	private Vector<School> allSchools; //All the schools in the system
+
+	public Vector<School> getAllSchools() {
+		return allSchools;
+	}
+
+	public void setAllSchools(Vector<School> _allSchools) {
+		allSchools = _allSchools;
+	}
+
 	
-	public void getData(String fileName)/* implement this method such that you will
+	
+	public void getData(String fileName) throws IOException/* implement this method such that you will
 	receive the file name (schoolDB.txt) as an input and inside the method you
 	will open that file, read it and will fill up the information for each course (fill the
 	vector)*/
 	{
-		
+        FileReader freader = new FileReader(fileName);  
+        BufferedReader br = new BufferedReader(freader);  
+        String s;  
+        while((s = br.readLine()) != null) {
+        	if(s.equals("$")){
+        		break;
+        	}
+        	String shcoolName = s;
+        	
+        	String numberOfHouses = br.readLine();
+        	int numOfHouses = Integer.parseInt(numberOfHouses);
+        	
+        	ArrayList<House> houses = new ArrayList<House>();
+        	
+        	for(int i = 0; i < numOfHouses; i++){
+        		String houseName = br.readLine();
+        		houses.add(new House(houseName));    		
+        	}
+        	
+        	String numberOfStudents = br.readLine();
+        	int numOfStudents = Integer.parseInt(numberOfStudents);
+        	
+        	Vector<Student> students = new Vector<Student>();
+        	
+        	for(int i = 0; i < numOfStudents; i++){
+        		String studentName = br.readLine();
+        		students.add(new Student(studentName));    		
+        	}
+        	
+        	String numberOfProfessors = br.readLine();
+        	int numOfProfessors = Integer.parseInt(numberOfProfessors);
+        	
+        	Vector<Professor> professors = new Vector<Professor>();
+        	
+        	for(int i = 0; i < numOfProfessors; i++){
+        		String professorName = br.readLine();
+        		professors.add(new Professor(professorName));    		
+        	}
+        
+        	String numberOfCourses = br.readLine();
+        	int numOfCourses = Integer.parseInt(numberOfCourses);
+        	
+        	ArrayList<Course> courses = new ArrayList<Course>();
+        	
+        	for(int i = 0; i < numOfCourses; i++){
+        		String courseName = br.readLine();
+        		courses.add(new Course(courseName));    		
+        	}
+        	
+        	String location = br.readLine();
+        	
+        	School newSchool = new School(shcoolName, houses, courses, 
+        			students, professors, location); 
+        	
+        	allSchools.add(newSchool);
+        		    
+        	s = br.readLine();	
+        }  
+        freader.close(); 
+	
 	}
 	
 	public void setData()/* implement this method so you can fill
@@ -57,10 +126,10 @@ public class SchoolService {
 		school = _school;
 	}
 	
-	
-	public SchoolService(School school) {
-		this.school = school;
+	public SchoolService(School _school) {
+		school = _school;
 		questions = new ArrayList<String>();
+		allSchools = new Vector<School>();
 		
 		String temp = new String("1.) You are given a test at school that has"
 				+ " questions that teacher hasn't covered yet. "

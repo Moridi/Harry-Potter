@@ -10,8 +10,9 @@ public class Professor extends Person{
 	// Constructors
 	
 	
-	public Professor(String _name, Map<Integer, Course> courses, String notes) {
-		super(_name);
+	public Professor(String _name, House _houseName, BloodStatus _bloodStatus,
+			School _school, String _birthday, Map<Integer, Course> courses, String notes) {
+		super(_name, _houseName, _bloodStatus, _school, _birthday);
 		this.courses = courses;
 		this.notes = notes;
 	}
@@ -25,7 +26,7 @@ public class Professor extends Person{
 	
 	@Override
 	public String toString() {
-		return "Professor [courses=" + courses + ", notes=" + notes + "]";
+		return "Professor [person=" + super.toString() + ", notes=" + notes + "]";
 	}
 
 	//Setters and getters

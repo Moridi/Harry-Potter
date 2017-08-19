@@ -1,7 +1,0 @@
-package service;
-
-import entities.School;
-
-public class SchoolService {
-
-}

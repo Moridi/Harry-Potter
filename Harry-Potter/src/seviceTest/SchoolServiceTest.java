@@ -1,5 +1,8 @@
 package seviceTest;
 
+import java.io.IOException;
+import java.util.Vector;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -28,6 +31,18 @@ import service.*;
 			
 			String actual = house.getName();
 			String expected = "Slytherin";
+			Assert.assertEquals(expected, actual);	
+		}
+		
+		@Test
+		public void getSchoolDataTest() throws IOException{
+			School gryf = new School("Gryffindor");
+			SchoolService gryff = new SchoolService(gryf);
+			gryff.getData("SchoolDB.txt");
+			Vector<School> allSchools = gryff.getAllSchools();
+			String actual = allSchools.get(0).toString();
+			String expected = "School [name=Hogwarts, numOfStudents=3, houseNames=4, studentNames=3, professorNames=2, courseNames=2, location=England]";
+
 			Assert.assertEquals(expected, actual);	
 		}
 }

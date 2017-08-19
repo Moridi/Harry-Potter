@@ -1,9 +1,0 @@
-package entities;
-
-import java.util.Vector;
-
-public class Students {
-	private Vector<Course> courses;
-	private Vector<FinishedCourse> reportCard;
-	
-}
