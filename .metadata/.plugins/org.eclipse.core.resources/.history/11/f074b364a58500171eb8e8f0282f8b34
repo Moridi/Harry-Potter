@@ -172,8 +172,7 @@ public class SchoolService {
 		questions = new ArrayList<String>();
 		allSchools = new Vector<School>();
 		
-		String temp = new String("*** In testing step choose \'1\' for all the questions... ***\n\n"
-				+ "1.) You are given a test at school that has"
+		String temp = new String("1.) You are given a test at school that has"
 				+ " questions that teacher hasn't covered yet. "
 				+ "In the middle of the test you notice that your friend next to you has"
 				+ " a cheat-sheet. The teacher doesn't notice.\nAsk to share the cheat-sheet."
