@@ -11,7 +11,7 @@ import service.*;
 
 public class ProfessorServiceTest {
 	@Test
-	public void getAndSetProfessorDataTest() throws IOException{
+	public void getProfessorDataTest() throws IOException{
 		Professor sev = new Professor("Severus Snape");
 		ProfessorService severus = new ProfessorService(sev);
 		

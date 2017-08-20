@@ -87,17 +87,11 @@ public class ProfessorService {
 			writer.println(x.getBloodStatus().toString());
 			writer.println(x.getSchool().getName());
 			writer.println(x.getBirthday());
-			
-			Map<Integer, Course> hash = x.getCourses();
-		
-			for ( Map.Entry<Integer, Course> entry : hash.entrySet()) {
-			    Integer key = entry.getKey();
-			    Course course = entry.getValue();
-			    
-			    writer.println(course.getName());
-				writer.println(key.toString());		
-			}
-		
+			Map<Integer, Course> map = x.getCourses();
+			String key = map.keySet().toString();
+			int endIndex = key.indexOf(']', 0);
+			key = key.substring(1, endIndex);
+			writer.println(key);
 			writer.println(x.getNotes());
 			writer.println("*");
 		}

@@ -11,7 +11,7 @@ import service.*;
 
 public class ProfessorServiceTest {
 	@Test
-	public void getAndSetProfessorDataTest() throws IOException{
+	public void getProfessorDataTest() throws IOException{
 		Professor sev = new Professor("Severus Snape");
 		ProfessorService severus = new ProfessorService(sev);
 		
@@ -24,9 +24,7 @@ public class ProfessorServiceTest {
 				+ " school=Hogwarts, birthday=09.01.1960],"
 				+ " notes=He was the bravest man whom ever lived."
 				+ " A death eater spy. A.K.A. The Half Blood Prince]";
-		Assert.assertEquals(expected, actual);
-		
-		severus.setData();
+		Assert.assertEquals(expected, actual);	
 	
 	}
 }

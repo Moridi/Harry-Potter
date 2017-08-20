@@ -89,7 +89,10 @@ public class ProfessorService {
 			writer.println(x.getBirthday());
 			
 			Map<Integer, Course> hash = x.getCourses();
-		
+//			String key = map.keySet().toString();
+//			int endIndex = key.indexOf(']', 0);
+//			key = key.substring(1, endIndex);
+//			
 			for ( Map.Entry<Integer, Course> entry : hash.entrySet()) {
 			    Integer key = entry.getKey();
 			    Course course = entry.getValue();
@@ -97,7 +100,8 @@ public class ProfessorService {
 			    writer.println(course.getName());
 				writer.println(key.toString());		
 			}
-		
+
+//			
 			writer.println(x.getNotes());
 			writer.println("*");
 		}
