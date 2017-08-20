@@ -61,7 +61,7 @@ public class StudentService {
 	public void setData() throws FileNotFoundException, UnsupportedEncodingException/* implement this method so you can fill
 	your database using the vector of courses you have */
 	{
-		PrintWriter writer = new PrintWriter("StudentDB.txt", "UTF-8");
+		PrintWriter writer = new PrintWriter("PersonDB.txt", "UTF-8");
 		for(Student x: allStudents)
 		{			
 			writer.println(x.getName());

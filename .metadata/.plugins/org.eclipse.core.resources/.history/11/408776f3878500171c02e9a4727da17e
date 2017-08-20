@@ -1,11 +1,8 @@
 package service;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Vector;
@@ -92,44 +89,10 @@ public class SchoolService {
 	
 	}
 	
-	public void setData() throws FileNotFoundException, UnsupportedEncodingException/* implement this method so you can fill
+	public void setData()/* implement this method so you can fill
 	your database using the vector of courses you have */
 	{
-		PrintWriter writer = new PrintWriter("SchoolDB.txt", "UTF-8");
-		for(School x: allSchools)
-		{			
-			writer.println(x.getName());
-			
-			writer.println(x.getHouseNames().size());
-			
-			for(House house: x.getHouseNames()){
-				writer.println(house.getName());
-			}
-			
-			writer.println(x.getStudentNames().size());
-			
-			for(Student student: x.getStudentNames()){
-				writer.println(student.getName());
-			}
-			
-			writer.println(x.getProfessorNames().size());
-			
-			for(Professor professor: x.getProfessorNames()){
-				writer.println(professor.getName());
-			}
-			
-			writer.println(x.getCourseNames().size());
-			
-			for(Course course: x.getCourseNames()){
-				writer.println(course.getName());
-			}
-			
-			writer.println(x.getLocation());
-			
-			writer.println("*");
-		}
-		writer.println("$");
-		writer.close();
+		
 	}
 	
 	public House sortintHat(Student student){

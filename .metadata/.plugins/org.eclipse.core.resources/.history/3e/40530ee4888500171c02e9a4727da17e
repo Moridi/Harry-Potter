@@ -138,8 +138,7 @@ public class SchoolService {
 		for( String question:questions)
 		{
 			System.out.println(question);
-			Scanner reader = new Scanner(System.in);
-			int n = reader.nextInt();
+			int n = new Scanner(System.in).nextInt();
 			sum += n;	
 		}
 		

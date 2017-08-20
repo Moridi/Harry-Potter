@@ -35,7 +35,7 @@ import service.*;
 		}
 		
 		@Test
-		public void getAndSetSchoolDataTest() throws IOException{
+		public void getSchoolDataTest() throws IOException{
 			School gryf = new School("Gryffindor");
 			SchoolService gryff = new SchoolService(gryf);
 			gryff.getData("SchoolDB.txt");
@@ -44,7 +44,5 @@ import service.*;
 			String expected = "School [name=Hogwarts, numOfStudents=3, houseNames=4, studentNames=3, professorNames=2, courseNames=2, location=England]";
 
 			Assert.assertEquals(expected, actual);	
-			gryff.setData();
-			
 		}
 }
