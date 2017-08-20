@@ -62,18 +62,13 @@ public class StudentService {
 	your database using the vector of courses you have */
 	{
 		PrintWriter writer = new PrintWriter("PersonDB.txt", "UTF-8");
-		for(Student x: allStudents)
+		for(Person x: allStudents)
 		{			
 			writer.println(x.getName());
 			writer.println(x.getHouseName().getName());
 			writer.println(x.getBloodStatus().toString());
 			writer.println(x.getSchool().getName());
 			writer.println(x.getBirthday());
-			writer.println(x.getCourses().size());
-			
-			for(Course course: x.getCourses()){
-				writer.println(course.getName());
-			}
 			writer.println("*");
 		}
 		writer.println("$");

@@ -70,7 +70,6 @@ public class StudentService {
 			writer.println(x.getSchool().getName());
 			writer.println(x.getBirthday());
 			writer.println(x.getCourses().size());
-			
 			for(Course course: x.getCourses()){
 				writer.println(course.getName());
 			}
