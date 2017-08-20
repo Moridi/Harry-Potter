@@ -28,6 +28,11 @@ public class School {
 		location = "Unknown";
 	}
 	
+	public School()
+	{	
+		this(null);
+	}
+	
 	public School(String _name, ArrayList<House> _houseNames, ArrayList<Course> _courseNames, 
 			Vector<Student> _studentNames, Vector<Professor> _professorNames, String loc)
 	{	

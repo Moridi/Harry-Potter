@@ -11,16 +11,20 @@ public class Professor extends Person{
 	
 	
 	public Professor(String _name, House _houseName, BloodStatus _bloodStatus,
-			School _school, String _birthday, Map<Integer, Course> courses, String notes) {
+			School _school, String _birthday, Map<Integer, Course> _courses, String _notes) {
 		super(_name, _houseName, _bloodStatus, _school, _birthday);
-		this.courses = courses;
-		this.notes = notes;
+		courses = _courses;
+		notes = _notes;
 	}
 	
 	public Professor(String _name) {
 		super(_name);
-		this.courses = null;
-		this.notes = null;
+		courses = null;
+		notes = null;
+	}
+	
+	public Professor() {
+		this(null);
 	}
 	
 	

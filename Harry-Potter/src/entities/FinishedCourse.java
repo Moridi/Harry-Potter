@@ -13,10 +13,10 @@ public class FinishedCourse extends Course{
 	// Constructors
 	
 	
-	public FinishedCourse(String _name, Grade grade, boolean passed) {
+	public FinishedCourse(String _name, Grade _grade, boolean _passed) {
 		super(_name);
-		this.grade = grade;
-		this.passed = passed;
+		grade = _grade;
+		passed = _passed;
 	}
 	
 	
@@ -24,8 +24,12 @@ public class FinishedCourse extends Course{
 	
 	public FinishedCourse(String _name){
 		super(_name);
-		this.grade = null;
-		this.passed = false;
+		grade = null;
+		passed = false;
+	}
+	
+	public FinishedCourse(){
+		this(null);
 	}
 	
 	public Grade getGrade() {

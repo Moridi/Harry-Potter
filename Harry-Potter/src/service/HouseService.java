@@ -10,16 +10,20 @@ public class HouseService {
 	private House house; //The house the services are perform on/at
 	private Vector<House> allHouses; //All the houses in the system
 	
+	public HouseService(House _house) {
+		house = _house;
+		allHouses = new Vector<House>();
+	}
+
+	public HouseService() {
+		this(null);
+	}
+	
 	public House getHouse() {
 		return house;
 	}
 	public void setHouse(House _house) {
 		house = _house;
-	}
-
-	public HouseService(House house) {
-		this.house = house;
-		allHouses = new Vector<House>();
 	}
 
 	public Vector<House> getAllHouses() {

@@ -9,6 +9,37 @@ public class StudentService {
 	private Student student;//The school the services are performed on/at
 	private Vector<Student> allStudents; //All the students in the system
 	
+	public StudentService(Student _student) {
+		student = _student;
+		allStudents = new Vector<Student>();
+	}
+
+	public StudentService() {
+		this(null);
+	}
+	
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student _student) {
+		student = _student;
+	}
+
+	public Vector<Student> getAllStudents() {
+		return allStudents;
+	}
+
+	public void setAllStudents(Vector<Student> _allStudents) {
+		allStudents = _allStudents;
+	}
+
+	public void sortToHouse(House house){
+		Vector<Student> students = house.getStudents();
+		students.add(student);
+		house.setStudents(students);
+	}
+	
 	public void getData(String fileName) throws IOException/* implement this method such that you will
 	receive the file name (schoolDB.txt) as an input and inside the method you
 	will open that file, read it and will fill up the information for each course (fill the
@@ -53,10 +84,6 @@ public class StudentService {
         freader.close(); 
 	}
 	
-	public StudentService(Student _student) {
-		student = _student;
-		allStudents = new Vector<Student>();
-	}
 
 	public void setData() throws FileNotFoundException, UnsupportedEncodingException/* implement this method so you can fill
 	your database using the vector of courses you have */
@@ -80,25 +107,4 @@ public class StudentService {
 		writer.close();
 	}
 	
-	public Student getStudent() {
-		return student;
-	}
-
-	public void setStudent(Student _student) {
-		student = _student;
-	}
-
-	public Vector<Student> getAllStudents() {
-		return allStudents;
-	}
-
-	public void setAllStudents(Vector<Student> _allStudents) {
-		allStudents = _allStudents;
-	}
-
-	public void sortToHouse(House house){
-		Vector<Student> students = house.getStudents();
-		students.add(student);
-		house.setStudents(students);
-	}
 }

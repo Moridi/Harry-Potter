@@ -17,17 +17,31 @@ public class ProfessorService {
 	private Professor professor; //The Professor the services are performe on/at
 	private Vector<Professor> allProfessors; //All the Professors in the system
 
-	public ProfessorService(Professor professor) {
-		this.professor = professor;
+	public ProfessorService(Professor _professor) {
+		professor = _professor;
 		allProfessors = new Vector<Professor>();
 	}
 
+	public ProfessorService() {
+		this(null);
+	}
+
+
+	public Vector<Professor> getAllProfessors() {
+		return allProfessors;
+	}
+
+	public void setAllProfessors(Vector<Professor> _allProfessors) {
+		allProfessors = _allProfessors;
+	}
+
+	
 	public Professor getProfessor() {
 		return professor;
 	}
 
-	public void setProfessor(Professor professor) {
-		this.professor = professor;
+	public void setProfessor(Professor _professor) {
+		professor = _professor;
 	}
 	
 	public void getData(String fileName) throws IOException /* implement this method such that you will
@@ -104,13 +118,5 @@ public class ProfessorService {
 		writer.println("$");
 		writer.close();
 	}
-	public Vector<Professor> getAllProfessors() {
-		return allProfessors;
-	}
-
-	public void setAllProfessors(Vector<Professor> allProfessors) {
-		this.allProfessors = allProfessors;
-	}
-
 	
 }

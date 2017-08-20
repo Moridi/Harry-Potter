@@ -15,22 +15,31 @@ public class House {
 	// Constructors
 	
 	
-	public House(String name, School school, Vector<Student> students) {
-		this.name = name;
-		this.school = school;
-		this.students = students;
+	public House(String _name, School _school, Vector<Student> _students) {
+		name = _name;
+		school = _school;
+		students = _students;
 	}
 	
-	public House(String name)
+	public House(String _name, School _school, Vector<Student> _students, Professor _headTeacher,
+			ArrayList<String> _qualities, Map<Integer, Student> _prefects) {
+		name = _name;
+		school = _school;
+		students = _students;
+		HeadTeacher = _headTeacher;
+		qualities = _qualities;
+		prefects = _prefects;
+	}
+
+	public House(String _name)
 	{
-		this.name = name;
-		this.school = null;
-		this.students = null;
-		HeadTeacher = null;
-		this.qualities = null;
-		this.prefects = null;
+		this(_name, null, null, null, null, null);
 	}	
 	
+	public House()
+	{
+		this(null, null, null, null, null, null);
+	}	
 	
 	@Override
 	public String toString() {

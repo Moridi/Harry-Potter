@@ -10,6 +10,31 @@ public class CourseService {
 		private Vector<Course> allCourses;//All the courses in the system
 
 		
+		public CourseService(Course _course) {
+			course = _course;
+			allCourses = new Vector<Course>();
+		}
+		
+		public CourseService() {
+			this(null);
+		}
+		
+		public Course getCourse() {
+			return course;
+		}
+
+		public void setCourse(Course _course) {
+			course = _course;
+		}
+
+		public Vector<Course> getAllCourses() {
+			return allCourses;
+		}
+
+		public void setAllCourses(Vector<Course> _allCourses) {
+			allCourses = _allCourses;
+		}
+		
 		public void getData(String fileName) throws IOException
 		/* implement this method such that you will
 		receive the file name (courseDB.txt) as an input and inside the method you
@@ -55,10 +80,6 @@ public class CourseService {
 	        freader.close(); 
 		}
 		
-		public CourseService(Course course) {
-			this.course = course;
-			allCourses = new Vector<Course>();
-		}
 
 		public void setData() throws FileNotFoundException, UnsupportedEncodingException/* implement this method so you can fill
 		your database using the vector of courses you have */
@@ -81,22 +102,5 @@ public class CourseService {
 			writer.println("$");
 			writer.close();
 		}
-
-		public Course getCourse() {
-			return course;
-		}
-
-		public void setCourse(Course _course) {
-			course = _course;
-		}
-
-		public Vector<Course> getAllCourses() {
-			return allCourses;
-		}
-
-		public void setAllCourses(Vector<Course> _allCourses) {
-			allCourses = _allCourses;
-		}
-		
 		
 }

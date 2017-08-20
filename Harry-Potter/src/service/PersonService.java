@@ -8,8 +8,16 @@ import entities.*;
 public class PersonService {
 	
 	private Person person;//The Person the services are performed on/at
-	
 	private Vector<Person> allPersons; //All the persons in the system
+	
+	public PersonService(Person _person) {
+		person = _person;
+		allPersons = new Vector<Person>();
+	}
+	
+	public PersonService() {
+		this(null);
+	}
 	
 	public Person getPerson() {
 		return person;
@@ -27,10 +35,6 @@ public class PersonService {
 		allPersons = _allPersons;
 	}
 
-	public PersonService(Person person) {
-		this.person = person;
-		allPersons = new Vector<Person>();
-	}
 
 	public void getData(String fileName) throws IOException /* implement this method such that you will
 	receive the file name (PersonDB.txt) as an input and inside the method you

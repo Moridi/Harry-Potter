@@ -23,6 +23,11 @@ public class Course
 		studentNames = null;
 	}
 	
+	public Course()
+	{	
+		this(null);
+	}
+	
 	@Override
 	public String toString() {
 		return "Course [name=" + name + ", professorName=" + professorName.getName() + ", minGrade=" + minGrade + ", year=" + year + "]";

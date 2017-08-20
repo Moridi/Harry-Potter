@@ -12,17 +12,20 @@ public class Student extends Person{
 	
 	
 	public Student(String _name, House _houseName, BloodStatus _bloodStatus,
-			School _school, String _birthday, Vector<Course> courses) {
+			School _school, String _birthday, Vector<Course> _courses) {
 		super(_name, _houseName, _bloodStatus, _school, _birthday);
-		this.courses = courses;
+		courses = _courses;
 	}
 	
-	public Student(String name){
-		super(name);
-		this.courses = null;
-		this.reportCard = null;
+	public Student(String _name){
+		super(_name);
+		courses = null;
+		reportCard = null;
 	}
 	
+	public Student(){
+		this(null);
+	}
 	
 	@Override
 	public String toString() {

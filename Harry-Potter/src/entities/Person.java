@@ -13,10 +13,7 @@ public class Person
 	
 	public Person(String _name)
 	{	
-		name = _name;
-		houseName = null;
-		bloodStatus = null;
-		school = null;
+		this(_name, null, null, null, null);
 	}
 	
 	public Person(String _name, House _houseName, BloodStatus _bloodStatus,
@@ -29,7 +26,10 @@ public class Person
 		birthday = _birthday;
 	}
 	
-	
+	public Person()
+	{	
+		this(null, null, null, null, null);
+	}
 
 	@Override
 	public String toString() {

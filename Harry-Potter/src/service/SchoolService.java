@@ -16,6 +16,10 @@ public class SchoolService {
 	private School school;//The school the services are performed on/at
 	private ArrayList<String> questions;	
 	private Vector<School> allSchools; //All the schools in the system
+	
+	public SchoolService() {
+		this(null);
+	}
 
 	public Vector<School> getAllSchools() {
 		return allSchools;
@@ -24,6 +28,16 @@ public class SchoolService {
 	public void setAllSchools(Vector<School> _allSchools) {
 		allSchools = _allSchools;
 	}
+	
+
+	public School getSchool() {
+		return school;
+	}
+
+	public void setSchool(School _school) {
+		school = _school;
+	}
+	
 
 	public void getData(String fileName) throws IOException/* implement this method such that you will
 	receive the file name (schoolDB.txt) as an input and inside the method you
@@ -153,14 +167,6 @@ public class SchoolService {
 			return new House("Hufflepuff");
 	}
 
-	public School getSchool() {
-		return school;
-	}
-
-	public void setSchool(School _school) {
-		school = _school;
-	}
-	
 	public SchoolService(School _school) {
 		school = _school;
 		questions = new ArrayList<String>();
