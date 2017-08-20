@@ -63,24 +63,10 @@ public class HouseService {
         freader.close(); 
 	}
 	
-	public void setData() throws FileNotFoundException, UnsupportedEncodingException
+	public void setData()
 	/* implement this method so you can fill
 	your database using the vector of houses you have */
 	{
-		PrintWriter writer = new PrintWriter("HouseDB.txt", "UTF-8");
-		for(House x: allHouses)
-		{			
-			writer.println(x.getName());
-			writer.println(x.getSchool().getName());
-
-			writer.println(x.getStudents().size());
-			
-			for(Student student: x.getStudents()){
-				writer.println(student.getName());
-			}
-			writer.println("*");
-		}
-		writer.println("$");
-		writer.close();
+		
 	}
 }

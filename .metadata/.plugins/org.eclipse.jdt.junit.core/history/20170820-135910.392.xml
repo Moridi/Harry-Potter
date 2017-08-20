@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="CourseServiceTest" project="Harry-Potter" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="seviceTest.CourseServiceTest" time="0.009">
-    <testcase name="getCourseDataTest" classname="seviceTest.CourseServiceTest" time="0.006"/>
-    <testcase name="setAndGetCourseTest" classname="seviceTest.CourseServiceTest" time="0.0"/>
-    <testcase name="ConstructorTest" classname="seviceTest.CourseServiceTest" time="0.003"/>
-  </testsuite>
-</testrun>

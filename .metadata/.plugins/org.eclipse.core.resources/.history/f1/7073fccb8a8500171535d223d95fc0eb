@@ -13,7 +13,7 @@ import entities.*;
 	public class HouseServiceTest {
 		
 		@Test
-		public void getAndSetHouseDataTest() throws IOException{
+		public void getHouseDataTest() throws IOException{
 			House Rave = new House("Ravenclaw");
 			HouseService ravenclaw = new HouseService(Rave);
 			
@@ -23,8 +23,6 @@ import entities.*;
 			String actual = allHouses.get(0).toString();
 			String expected = "House [name=Ravenclaw, school=Hogwarts]";
 			Assert.assertEquals(expected, actual);	
-			
-			ravenclaw.setData();//Check HouseDB.txt
 		
 		}
 }

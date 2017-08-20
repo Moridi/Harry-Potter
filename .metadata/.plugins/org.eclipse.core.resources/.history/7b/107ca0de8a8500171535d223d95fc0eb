@@ -36,7 +36,7 @@ import entities.*;
 		}
 		
 		@Test
-		public void getAndSetCourseDataTest() throws IOException{
+		public void getCourseDataTest() throws IOException{
 			Course flying = new Course("flying");
 			CourseService fly = new CourseService(flying);
 			fly.getData("CourseDB.txt");

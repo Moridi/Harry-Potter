@@ -63,7 +63,7 @@ public class HouseService {
         freader.close(); 
 	}
 	
-	public void setData() throws FileNotFoundException, UnsupportedEncodingException
+	public void setData()
 	/* implement this method so you can fill
 	your database using the vector of houses you have */
 	{
@@ -71,11 +71,11 @@ public class HouseService {
 		for(House x: allHouses)
 		{			
 			writer.println(x.getName());
-			writer.println(x.getSchool().getName());
+			writer.println(x.getMinGrade().toString());
 
-			writer.println(x.getStudents().size());
+			writer.println(x.getStudentNames().size());
 			
-			for(Student student: x.getStudents()){
+			for(Student student: x.getStudentNames()){
 				writer.println(student.getName());
 			}
 			writer.println("*");

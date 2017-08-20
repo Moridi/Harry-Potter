@@ -63,7 +63,7 @@ public class HouseService {
         freader.close(); 
 	}
 	
-	public void setData() throws FileNotFoundException, UnsupportedEncodingException
+	public void setData()
 	/* implement this method so you can fill
 	your database using the vector of houses you have */
 	{
