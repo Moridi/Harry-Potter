@@ -60,26 +60,10 @@ public class CourseService {
 			allCourses = new Vector<Course>();
 		}
 
-		public void setData() throws FileNotFoundException, UnsupportedEncodingException/* implement this method so you can fill
+		public void setData()/* implement this method so you can fill
 		your database using the vector of courses you have */
 		{
-			PrintWriter writer = new PrintWriter("CourseDB.txt", "UTF-8");
-			for(Course x: allCourses)
-			{			
-				writer.println(x.getName());
-				writer.println(x.getMinGrade().toString());
-				writer.println(x.getProfessorName().getName());
-				writer.println(x.getYear());
-
-				writer.println(x.getStudentNames().size());
-				
-				for(Student student: x.getStudentNames()){
-					writer.println(student.getName());
-				}
-				writer.println("*");
-			}
-			writer.println("$");
-			writer.close();
+			
 		}
 
 		public Course getCourse() {

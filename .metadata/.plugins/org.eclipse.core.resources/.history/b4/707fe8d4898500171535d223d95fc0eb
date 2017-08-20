@@ -60,7 +60,7 @@ public class CourseService {
 			allCourses = new Vector<Course>();
 		}
 
-		public void setData() throws FileNotFoundException, UnsupportedEncodingException/* implement this method so you can fill
+		public void setData()/* implement this method so you can fill
 		your database using the vector of courses you have */
 		{
 			PrintWriter writer = new PrintWriter("CourseDB.txt", "UTF-8");

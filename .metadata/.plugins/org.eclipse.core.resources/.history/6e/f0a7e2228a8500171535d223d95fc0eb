@@ -79,6 +79,7 @@ public class CourseService {
 				writer.println("*");
 			}
 			writer.println("$");
+			writer.println("$");
 			writer.close();
 		}
 
