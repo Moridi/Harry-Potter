@@ -1,6 +1,10 @@
 package service;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Vector;
 
 import entities.*;
@@ -70,17 +74,15 @@ public class PersonService {
 	/* implement this method so you can fill
 	your database using the vector of persons you have */
 	{
-		PrintWriter writer = new PrintWriter("PersonDB.txt", "UTF-8");
+		FileWriter fw = new FileWriter("PersonDB.txt", true);
+		BufferedWriter bw = new BufferedWriter(fw);
 		for(Person x: allPersons)
-		{			
-			writer.println(x.getName());
-			writer.println(x.getHouseName().getName());
-			writer.println(x.getBloodStatus().toString());
-			writer.println(x.getSchool().getName());
-			writer.println(x.getBirthday());
-			writer.println("*");
+		{
+			bw.write(x.getName());
+			bw.write(x.getHouseName().getName());
+			bw.write(x.getBloodStatus().toString());
+			bw.write(x.getHouseName().getName());
+			bw.write(x.getBirthday());
 		}
-		writer.println("$");
-		writer.close();
 	}
 }

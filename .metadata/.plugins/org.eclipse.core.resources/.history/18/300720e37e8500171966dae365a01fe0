@@ -22,6 +22,7 @@ public class PersonServiceTest {
 		String expected = "Person [name=Severus Snape, houseName=Slytherin, bloodStatus=Half_blood, school=Hogwarts, birthday=09.01.1960]";
 		Assert.assertEquals(expected, actual);	
 		severus.setData(); //Check PersonDB.txt
+	
 	}
 	
 }

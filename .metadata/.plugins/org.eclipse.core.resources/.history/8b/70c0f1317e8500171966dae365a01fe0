@@ -70,16 +70,18 @@ public class PersonService {
 	/* implement this method so you can fill
 	your database using the vector of persons you have */
 	{
-		PrintWriter writer = new PrintWriter("PersonDB.txt", "UTF-8");
+		PrintWriter writer = new PrintWriter("the-file-name.txt", "UTF-8");
+		writer.println("Salam");
 		for(Person x: allPersons)
 		{			
 			writer.println(x.getName());
 			writer.println(x.getHouseName().getName());
 			writer.println(x.getBloodStatus().toString());
-			writer.println(x.getSchool().getName());
+			writer.println(x.getHouseName().getName());
 			writer.println(x.getBirthday());
 			writer.println("*");
 		}
+		writer.println("$");
 		writer.println("$");
 		writer.close();
 	}

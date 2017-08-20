@@ -5,4 +5,7 @@
 <fullyQualifiedTypeName name="entities.Student"/>
 <fullyQualifiedTypeName name="java.util.StringJoiner"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="service.StudentService"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 </qualifiedTypeNameHistroy>

@@ -80,7 +80,7 @@ public class PersonService {
 			writer.println(x.getBirthday());
 			writer.println("*");
 		}
-		writer.println("$");
+		writer.println("$\n");
 		writer.close();
 	}
 }

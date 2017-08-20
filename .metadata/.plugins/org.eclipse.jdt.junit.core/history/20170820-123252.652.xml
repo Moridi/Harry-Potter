@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PersonServiceTest" project="Harry-Potter" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="seviceTest.PersonServiceTest" time="0.017">
+    <testcase name="setPersonDataTest" classname="seviceTest.PersonServiceTest" time="0.01"/>
+    <testcase name="getPersonDataTest" classname="seviceTest.PersonServiceTest" time="0.007"/>
+  </testsuite>
+</testrun>

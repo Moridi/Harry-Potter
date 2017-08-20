@@ -11,7 +11,7 @@ import service.*;
 
 public class PersonServiceTest {
 	@Test
-	public void getAndSetPersonDataTest() throws IOException{
+	public void getPersonDataTest() throws IOException{
 		Person sev = new Person("Severus Snape");
 		PersonService severus = new PersonService(sev);
 		
@@ -21,7 +21,16 @@ public class PersonServiceTest {
 		String actual = allPersons.get(0).toString();
 		String expected = "Person [name=Severus Snape, houseName=Slytherin, bloodStatus=Half_blood, school=Hogwarts, birthday=09.01.1960]";
 		Assert.assertEquals(expected, actual);	
-		severus.setData(); //Check PersonDB.txt
+	
 	}
 	
+	@Test
+	public void setPersonDataTest() throws IOException{
+		Person sev = new Person("Severus Snape");
+		PersonService severus = new PersonService(sev);
+		
+		severus.setData();
+		
+		getPersonDataTest();
+	}
 }
