@@ -12,54 +12,8 @@ public class Main {
 		Scanner reader = new Scanner(System.in);
 		int n = reader.nextInt();
 		
-		return n;
+		return 1;
 	}
-	
-	public static String cin()
-	{
-		Scanner reader = new Scanner(System.in);
-		String s = reader.nextLine();
-		return s;
-	}
-	
-	public static Course getNewCourse(){
-		System.out.println("Please enter course name:\n");
-		
-		String courseName = cin();
-
-		return new Course(courseName);
-	}
-	
-	public static void doCourseAction(int action){
-		if(action > 5 || action < 1)
-			return;
-		
-		//create, edit, delete, search, sort
-		
-		switch(action){
-		case(1):
-			Course newCourse = getNewCourse();
-			System.out.println(newCourse.getName() + " added to courses and data base.");
-			break;
-			
-		case(2):
-			break;
-		
-		case(3):
-			break;
-		
-		case(4):
-			break;
-		
-		case(5):
-			break;
-		
-		default:
-			break;
-	}
-		
-	}
-	
 	public static void main(String[] args){
 		while(true)
 		{
@@ -75,29 +29,32 @@ public class Main {
 				System.out.println("Illegal input!Please choose other ones.");
 				continue;
 			}
-			
-			int action = printChoices();
-			
 			switch(n){
 				case(1):
-					doCourseAction(action);
+				{
+					int kind = printChoices();
 					break;
-					
+				}
 				case(2):
+				{
 					break;
-				
+				}
 				case(3):
+				{
 					break;
-				
+				}
 				case(4):
+				{
 					break;
-				
+				}
 				case(5):
+				{
 					break;
-				
+				}
 				case(6):
+				{
 					break;
-				
+				}
 				default:
 					break;
 			}

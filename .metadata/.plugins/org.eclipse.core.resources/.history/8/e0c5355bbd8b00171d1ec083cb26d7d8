@@ -39,7 +39,7 @@ public class Main {
 		switch(action){
 		case(1):
 			Course newCourse = getNewCourse();
-			System.out.println(newCourse.getName() + " added to courses and data base.");
+			System.out.println(newCourse.getName() + " added to courses and DB.");
 			break;
 			
 		case(2):

@@ -22,8 +22,8 @@ public class Main {
 		return s;
 	}
 	
-	public static Course getNewCourse(){
-		System.out.println("Please enter course name:\n");
+	public Course getNewCourse(){
+		System.out.println("Please enter course name:");
 		
 		String courseName = cin();
 
@@ -38,8 +38,8 @@ public class Main {
 		
 		switch(action){
 		case(1):
-			Course newCourse = getNewCourse();
-			System.out.println(newCourse.getName() + " added to courses and data base.");
+			Course newCourse = getNewCourse()
+		
 			break;
 			
 		case(2):

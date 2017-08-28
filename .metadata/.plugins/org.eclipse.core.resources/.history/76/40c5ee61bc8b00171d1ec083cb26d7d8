@@ -15,19 +15,8 @@ public class Main {
 		return n;
 	}
 	
-	public static String cin()
-	{
-		Scanner reader = new Scanner(System.in);
-		String s = reader.nextLine();
-		return s;
-	}
-	
-	public static Course getNewCourse(){
-		System.out.println("Please enter course name:\n");
+	public Course getNewCourse(){
 		
-		String courseName = cin();
-
-		return new Course(courseName);
 	}
 	
 	public static void doCourseAction(int action){
@@ -38,8 +27,8 @@ public class Main {
 		
 		switch(action){
 		case(1):
-			Course newCourse = getNewCourse();
-			System.out.println(newCourse.getName() + " added to courses and data base.");
+			Course newCourse = getNewCourse()
+		
 			break;
 			
 		case(2):
