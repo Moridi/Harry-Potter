@@ -44,36 +44,6 @@ public class ProfessorService {
 		professor = _professor;
 	}
 	
-	/// new classes	
-			public Professor getProfessorByName(String professorName){
-				return null;
-			}
-			
-			public void showAllProfessors(){
-				
-			}
-			
-			public void showProfessor(String professorName){
-				
-			}
-			
-			public void createNewProfessor(Professor newProfessor){
-				
-			}
-			
-			public void editProfessor(Professor newProfessor){
-				
-			}
-			
-			public void deleteProfessor(Professor oldProfessor){
-				
-			}
-			
-			public Professor searchByName(String searchedProfessor){
-				return null;
-			}
-	
-	
 	public void getData(String fileName) throws IOException /* implement this method such that you will
 	receive the file name (professorDB.txt) as an input and inside the method you will
 	open that file, read it and will fill up the information for each Professor (fill the

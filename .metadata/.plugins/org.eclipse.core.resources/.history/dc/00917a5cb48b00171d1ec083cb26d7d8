@@ -33,35 +33,7 @@ public class HouseService {
 	public void setAllHouses(Vector<House> _allHouses) {
 		allHouses = _allHouses;
 	}
-/// new classes	
-	public House getHouseByName(String houseName){
-		return null;
-	}
-	
-	public void showAllHouse(){
-		
-	}
-	
-	public void showHouse(String houseName){
-		
-	}
-	
-	public void createNewHouse(House newHouse){
-		
-	}
-	
-	public void editHouse(House newHouse){
-		
-	}
-	
-	public void deleteHouse(House oldHouse){
-		
-	}
-	
-	public House searchByName(String searchedHouse){
-		return null;
-	}
-	
+
 	public void getData(String fileName) throws IOException /* implement this method such that you will
 	receive the file name (houseDB.txt) as an input and inside the method you will
 	open that file, read it and will fill up the information for each house (fill the

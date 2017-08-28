@@ -52,15 +52,15 @@ public class PersonService {
 			
 		}
 		
-		public void editPerson(Person newPerson){
+		public void editHouse(House newHouse){
 			
 		}
 		
-		public void deletePerson(Person oldPerson){
+		public void deleteHouse(House oldHouse){
 			
 		}
 		
-		public Person searchByName(String searchedPerson){
+		public House searchByName(String searchedHouse){
 			return null;
 		}
 			

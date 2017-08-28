@@ -35,37 +35,6 @@ public class PersonService {
 		allPersons = _allPersons;
 	}
 
-	/// new classes	
-		public Person getPersonByName(String personName){
-			return null;
-		}
-		
-		public void showAllPersons(){
-			
-		}
-		
-		public void showPerson(String personName){
-			
-		}
-		
-		public void createNewPerson(Person newPerson){
-			
-		}
-		
-		public void editPerson(Person newPerson){
-			
-		}
-		
-		public void deletePerson(Person oldPerson){
-			
-		}
-		
-		public Person searchByName(String searchedPerson){
-			return null;
-		}
-			
-	
-	
 
 	public void getData(String fileName) throws IOException /* implement this method such that you will
 	receive the file name (PersonDB.txt) as an input and inside the method you

@@ -33,36 +33,6 @@ public class StudentService {
 	public void setAllStudents(Vector<Student> _allStudents) {
 		allStudents = _allStudents;
 	}
-	
-	
-	/// new classes	
-	public Student getStudentByName(String studentName){
-		return null;
-	}
-	
-	public void showAllStudents(){
-		
-	}
-	
-	public void showStudent(String studentName){
-		
-	}
-	
-	public void createNewStudent(Student newStudent){
-		
-	}
-	
-	public void editStudent(Student newStudent){
-		
-	}
-	
-	public void deleteStudent(Student oldStudent){
-		
-	}
-	
-	public Student searchByName(String searchedStudent){
-		return null;
-	}
 
 	public void sortToHouse(House house){
 		Vector<Student> students = house.getStudents();

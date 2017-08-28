@@ -57,19 +57,19 @@ public class ProfessorService {
 				
 			}
 			
-			public void createNewProfessor(Professor newProfessor){
+			public void createNewPerson(Person newPerson){
 				
 			}
 			
-			public void editProfessor(Professor newProfessor){
+			public void editPerson(Person newPerson){
 				
 			}
 			
-			public void deleteProfessor(Professor oldProfessor){
+			public void deletePerson(Person oldPerson){
 				
 			}
 			
-			public Professor searchByName(String searchedProfessor){
+			public Person searchByName(String searchedPerson){
 				return null;
 			}
 	

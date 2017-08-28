@@ -38,6 +38,35 @@ public class SchoolService {
 		school = _school;
 	}
 	
+	
+	/// new classes	
+	public School getSchoolByName(String schoolName){
+		return null;
+	}
+	
+	public void showAllSchools(){
+		
+	}
+	
+	public void showSchool(String schoolName){
+		
+	}
+	
+	public void createNewSchool(School newSchool){
+		
+	}
+	
+	public void editSchool(School newSchool){
+		
+	}
+	
+	public void deleteSchool(School oldSchool){
+		
+	}
+	
+	public School searchByName(String searchedSchool){
+		return null;
+	}
 
 	public void getData(String fileName) throws IOException/* implement this method such that you will
 	receive the file name (schoolDB.txt) as an input and inside the method you

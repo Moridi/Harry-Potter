@@ -1,21 +1,179 @@
 package service;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Vector;
 
-import entities.School;
-import entities.Student;
-import entities.House;
+import entities.*;
 
 public class SchoolService {
-	private School school;
-	private ArrayList<String> questions;
+	private School school;//The school the services are performed on/at
+	private ArrayList<String> questions;	
+	private Vector<School> allSchools; //All the schools in the system
 	
-	public SchoolService(School school) {
-		this.school = school;
+	public SchoolService() {
+		this(null);
+	}
+
+	public Vector<School> getAllSchools() {
+		return allSchools;
+	}
+
+	public void setAllSchools(Vector<School> _allSchools) {
+		allSchools = _allSchools;
+	}
+	
+
+	public School getSchool() {
+		return school;
+	}
+
+	public void setSchool(School _school) {
+		school = _school;
+	}
+	
+
+	public void getData(String fileName) throws IOException/* implement this method such that you will
+	receive the file name (schoolDB.txt) as an input and inside the method you
+	will open that file, read it and will fill up the information for each course (fill the
+	vector)*/
+	{
+        FileReader freader = new FileReader(fileName);  
+        BufferedReader br = new BufferedReader(freader);  
+        String s;  
+        while((s = br.readLine()) != null) {
+        	if(s.equals("$")){
+        		break;
+        	}
+        	String shcoolName = s;
+        	
+        	String numberOfHouses = br.readLine();
+        	int numOfHouses = Integer.parseInt(numberOfHouses);
+        	
+        	ArrayList<House> houses = new ArrayList<House>();
+        	
+        	for(int i = 0; i < numOfHouses; i++){
+        		String houseName = br.readLine();
+        		houses.add(new House(houseName));    		
+        	}
+        	
+        	String numberOfStudents = br.readLine();
+        	int numOfStudents = Integer.parseInt(numberOfStudents);
+        	
+        	Vector<Student> students = new Vector<Student>();
+        	
+        	for(int i = 0; i < numOfStudents; i++){
+        		String studentName = br.readLine();
+        		students.add(new Student(studentName));    		
+        	}
+        	
+        	String numberOfProfessors = br.readLine();
+        	int numOfProfessors = Integer.parseInt(numberOfProfessors);
+        	
+        	Vector<Professor> professors = new Vector<Professor>();
+        	
+        	for(int i = 0; i < numOfProfessors; i++){
+        		String professorName = br.readLine();
+        		professors.add(new Professor(professorName));    		
+        	}
+        
+        	String numberOfCourses = br.readLine();
+        	int numOfCourses = Integer.parseInt(numberOfCourses);
+        	
+        	ArrayList<Course> courses = new ArrayList<Course>();
+        	
+        	for(int i = 0; i < numOfCourses; i++){
+        		String courseName = br.readLine();
+        		courses.add(new Course(courseName));    		
+        	}
+        	
+        	String location = br.readLine();
+        	
+        	School newSchool = new School(shcoolName, houses, courses, 
+        			students, professors, location); 
+        	
+        	allSchools.add(newSchool);
+        		    
+        	s = br.readLine();	
+        }  
+        freader.close(); 
+	
+	}
+	
+	public void setData() throws FileNotFoundException, UnsupportedEncodingException/* implement this method so you can fill
+	your database using the vector of courses you have */
+	{
+		PrintWriter writer = new PrintWriter("SchoolDB.txt", "UTF-8");
+		for(School x: allSchools)
+		{			
+			writer.println(x.getName());
+			
+			writer.println(x.getHouseNames().size());
+			
+			for(House house: x.getHouseNames()){
+				writer.println(house.getName());
+			}
+			
+			writer.println(x.getStudentNames().size());
+			
+			for(Student student: x.getStudentNames()){
+				writer.println(student.getName());
+			}
+			
+			writer.println(x.getProfessorNames().size());
+			
+			for(Professor professor: x.getProfessorNames()){
+				writer.println(professor.getName());
+			}
+			
+			writer.println(x.getCourseNames().size());
+			
+			for(Course course: x.getCourseNames()){
+				writer.println(course.getName());
+			}
+			
+			writer.println(x.getLocation());
+			
+			writer.println("*");
+		}
+		writer.println("$");
+		writer.close();
+	}
+	
+	public House sortintHat(Student student){
+		int sum = 0;
 		
+		for( String question:questions)
+		{
+			System.out.println(question);
+			Scanner reader = new Scanner(System.in);
+			int n = reader.nextInt();
+			sum += n;	
+		}
+		
+		if(sum < 24)
+			return new House("Slytherin");
+		else if (sum > 43)
+			return new House("Ravenclaw");
+		else if (sum > 36)
+			return new House("Gryffindor");
+		else 
+			return new House("Hufflepuff");
+	}
+
+	public SchoolService(School _school) {
+		school = _school;
 		questions = new ArrayList<String>();
+		allSchools = new Vector<School>();
 		
-		String temp = new String("1.) You are given a test at school that has"
+		String temp = new String("*** In testing step choose \'1\' for all the questions... ***\n\n"
+				+ "1.) You are given a test at school that has"
 				+ " questions that teacher hasn't covered yet. "
 				+ "In the middle of the test you notice that your friend next to you has"
 				+ " a cheat-sheet. The teacher doesn't notice.\nAsk to share the cheat-sheet."
@@ -138,27 +296,5 @@ public class SchoolService {
 		
 		questions.add(temp);
 		
-	}
-
-
-
-	public House sortintHat(Student student){
-		for( String question:questions)
-		{
-			System.out.println(question);
-			Scanner reader = new Scanner(System.in);
-			int n = reader.nextInt();
-			
-			System.out.println(">> " n);
-		}
-		return null;
-	}
-
-	public School getSchool() {
-		return school;
-	}
-
-	public void setSchool(School _school) {
-		school = _school;
 	}
 }
