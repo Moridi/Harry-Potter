@@ -17,7 +17,7 @@ public class SchoolService {
 	private ArrayList<String> questions;	
 	private Vector<School> allSchools; //All the schools in the system
 	
-	public SchoolService() {
+	public SchoolService() throws IOException {
 		this(null);
 	}
 
@@ -196,10 +196,12 @@ public class SchoolService {
 			return new House("Hufflepuff");
 	}
 
-	public SchoolService(School _school) {
+	public SchoolService(School _school) throws IOException {
 		school = _school;
 		questions = new ArrayList<String>();
 		allSchools = new Vector<School>();
+		
+		this.getData("SchoolDB.txt");
 		
 		String temp = new String("*** In testing step choose \'1\' for all the questions... ***\n\n"
 				+ "1.) You are given a test at school that has"

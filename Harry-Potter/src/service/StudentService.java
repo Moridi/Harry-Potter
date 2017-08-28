@@ -9,12 +9,13 @@ public class StudentService {
 	private Student student;//The school the services are performed on/at
 	private Vector<Student> allStudents; //All the students in the system
 	
-	public StudentService(Student _student) {
+	public StudentService(Student _student) throws IOException {
 		student = _student;
 		allStudents = new Vector<Student>();
+		this.getData("StudentDB.txt");
 	}
 
-	public StudentService() {
+	public StudentService() throws IOException {
 		this(null);
 	}
 	

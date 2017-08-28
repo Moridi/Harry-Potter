@@ -17,12 +17,13 @@ public class ProfessorService {
 	private Professor professor; //The Professor the services are performe on/at
 	private Vector<Professor> allProfessors; //All the Professors in the system
 
-	public ProfessorService(Professor _professor) {
+	public ProfessorService(Professor _professor) throws IOException {
 		professor = _professor;
 		allProfessors = new Vector<Professor>();
+		this.getData("ProfessorDB.txt");
 	}
 
-	public ProfessorService() {
+	public ProfessorService() throws IOException {
 		this(null);
 	}
 

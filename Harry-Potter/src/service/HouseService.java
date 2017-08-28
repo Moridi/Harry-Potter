@@ -10,12 +10,13 @@ public class HouseService {
 	private House house; //The house the services are perform on/at
 	private Vector<House> allHouses; //All the houses in the system
 	
-	public HouseService(House _house) {
+	public HouseService(House _house) throws IOException {
 		house = _house;
 		allHouses = new Vector<House>();
+		this.getData("HouseDB.txt");
 	}
 
-	public HouseService() {
+	public HouseService() throws IOException {
 		this(null);
 	}
 	

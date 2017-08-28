@@ -10,12 +10,13 @@ public class PersonService {
 	private Person person;//The Person the services are performed on/at
 	private Vector<Person> allPersons; //All the persons in the system
 	
-	public PersonService(Person _person) {
+	public PersonService(Person _person) throws IOException {
 		person = _person;
 		allPersons = new Vector<Person>();
+		this.getData("PersonDB.txt");
 	}
 	
-	public PersonService() {
+	public PersonService() throws IOException {
 		this(null);
 	}
 	

@@ -13,7 +13,7 @@ import service.*;
 
 		@Test
 		
-		public void constructorTest() {	
+		public void constructorTest() throws IOException {	
 			School gryff = new School("Gryffindor");
 			SchoolService schoolServe = new SchoolService(gryff);
 			String actual = schoolServe.getSchool().getName();
@@ -22,7 +22,7 @@ import service.*;
 			
 		}	
 		@Test
-		public void questionsTest() {
+		public void questionsTest() throws IOException {
 			School gryff = new School("Gryffindor");
 			SchoolService schoolServe = new SchoolService(gryff);
 			

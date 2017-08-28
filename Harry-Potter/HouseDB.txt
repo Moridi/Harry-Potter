@@ -44,4 +44,50 @@ Ilvermorny
 1
 Webster Boot
 *
+Ravenclaw
+Hogwarts
+2
+Luna Lovegood
+Cho Chang
+*
+Gryffindor
+Hogwarts
+5
+Harry Potter
+Hermoine Granger
+Ronald Weasley
+Nevile Longbottom
+Seamus Finnigan
+*
+Hufflepuff
+Hogwarts
+1
+Cedric Diggory
+*
+Slytherin
+Hogwarts
+2
+Draco Malfoy
+Penelope Clearwater
+*
+Thunderbird
+Ilvermorny
+1
+Chadwig Boot
+*
+Horned Serpent
+Ilvermorny
+1
+Isolt Sayre
+*
+Pukwudgie
+Ilvermorny
+1
+James Steward
+*
+Wampus
+Ilvermorny
+1
+Webster Boot
+*
 $

@@ -1,5 +1,6 @@
 package service;
 
+import java.io.IOException;
 import java.util.Scanner;
 import entities.*;
 
@@ -7,7 +8,7 @@ public class Main {
 	public static int printChoices(){
 		System.out.println("Which kind of actions do you like "
 				+ "to shown:\n1- Create\n2- Edit\n3- Delete"
-				+ "\n4- Search\n5- Sort\n");
+				+ "\n4- Search\n5- Sort");
 		
 		Scanner reader = new Scanner(System.in);
 		int n = reader.nextInt();
@@ -23,14 +24,14 @@ public class Main {
 	}
 	
 	public static Course getNewCourse(){
-		System.out.println("Please enter course name:\n");
+		System.out.println("Please enter course name:");
 		
 		String courseName = cin();
 
 		return new Course(courseName);
 	}
 	
-	public static void doCourseAction(int action){
+	public static void doCourseAction(int action) throws IOException{
 		if(action > 5 || action < 1)
 			return;
 		
@@ -39,6 +40,8 @@ public class Main {
 		switch(action){
 		case(1):
 			Course newCourse = getNewCourse();
+			CourseService courseService = new CourseService(newCourse);
+			courseService.createNewCourse(newCourse);
 			System.out.println(newCourse.getName() + " added to courses and data base.");
 			break;
 			
@@ -60,7 +63,7 @@ public class Main {
 		
 	}
 	
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException{
 		while(true)
 		{
 			System.out.println("\nHello!\nWhich kind of entities do you like "

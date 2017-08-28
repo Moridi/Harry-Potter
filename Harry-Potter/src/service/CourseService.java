@@ -10,12 +10,13 @@ public class CourseService {
 		private Vector<Course> allCourses;//All the courses in the system
 
 		
-		public CourseService(Course _course) {
+		public CourseService(Course _course) throws IOException {
 			course = _course;
 			allCourses = new Vector<Course>();
+			this.getData("CourseDB.txt");
 		}
 		
-		public CourseService() {
+		public CourseService() throws IOException {
 			this(null);
 		}
 		
@@ -48,8 +49,9 @@ public class CourseService {
 			
 		}
 		
-		public void createNewCourse(Course newCourse){
-			
+		public void createNewCourse(Course newCourse) throws FileNotFoundException, UnsupportedEncodingException{
+			allCourses.add(newCourse);
+			setData();
 		}
 		
 		public void editCourse(Course newCourse){
@@ -118,13 +120,22 @@ public class CourseService {
 			{			
 				writer.println(x.getName());
 				writer.println(x.getMinGrade().toString());
-				writer.println(x.getProfessorName().getName());
+				if(x.getProfessorName() == null)
+					writer.println("--");
+				else
+					writer.println(x.getProfessorName().getName());
+				
 				writer.println(x.getYear());
 
-				writer.println(x.getStudentNames().size());
+				if(x.getStudentNames() == null)
+					writer.println("0");
 				
-				for(Student student: x.getStudentNames()){
-					writer.println(student.getName());
+				else{
+					writer.println(x.getStudentNames().size());
+				
+					for(Student student: x.getStudentNames()){
+						writer.println(student.getName());
+					}
 				}
 				writer.println("*");
 			}

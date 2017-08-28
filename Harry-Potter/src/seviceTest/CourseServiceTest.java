@@ -13,7 +13,7 @@ import entities.*;
 	public class CourseServiceTest {
 		
 		@Test
-		public void ConstructorTest() {
+		public void ConstructorTest() throws IOException {
 			Course flying = new Course("flying");
 			CourseService fly = new CourseService(flying);
 			Course flyi = fly.getCourse();
@@ -22,7 +22,7 @@ import entities.*;
 			Assert.assertEquals(expected, actual);			
 		}		
 		@Test
-		public void setAndGetCourseTest() {
+		public void setAndGetCourseTest() throws IOException {
 			Course flying = new Course("flying");
 			CourseService fly = new CourseService(flying);
 			Course flyiing = new Course("flyiiing");
