@@ -1,0 +1,9 @@
+package service;
+
+public class Main {
+	public static void main(String[] args){
+		System.out.println("Hello!\nWhich kind of entities do you like "
+				+ "to shown:\n1- Course\n2- House\n3- Person"
+				+ "\n4- Professor\n2- School\n3- Student";)
+	}
+}

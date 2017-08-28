@@ -1,0 +1,7 @@
+package service;
+
+public class Main {
+	public static void main(String[] args){
+		System.out.println("Hello!\nWhich kind of entities do you like to show:\n);
+	}
+}
