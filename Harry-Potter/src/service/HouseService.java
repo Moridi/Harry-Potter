@@ -34,32 +34,56 @@ public class HouseService {
 	public void setAllHouses(Vector<House> _allHouses) {
 		allHouses = _allHouses;
 	}
-/// new classes	
+	
+	/// new classes	
 	public House getHouseByName(String houseName){
-		return null;
+		return searchByName(houseName);
 	}
 	
-	public void showAllHouse(){
-		
+	public void showAllHouses(){
+		for(House _house: allHouses){
+			System.out.println(_house.toString());
+		}
 	}
 	
-	public void showHouse(String houseName){
-		
+	public void showHouse(String houseName) throws FileNotFoundException, UnsupportedEncodingException{
+		for(House _house: allHouses){
+			if(_house.getName().equals(houseName)){
+				System.out.println(_house.toString());
+				return;
+			}
+		}
+		System.out.println(houseName + " not found!");
 	}
 	
-	public void createNewHouse(House newHouse){
-		
+	public void createNewHouse(House newHouse) throws FileNotFoundException, UnsupportedEncodingException{
+		allHouses.add(newHouse);
+		setData();
 	}
 	
-	public void editHouse(House newHouse){
-		
+	public void editHouse(House newHouse) throws FileNotFoundException, UnsupportedEncodingException{
+		house = newHouse;
+		setData();
 	}
 	
-	public void deleteHouse(House oldHouse){
-		
+	public void deleteHouse(House oldHouse) throws FileNotFoundException, UnsupportedEncodingException{
+		for(House _house: allHouses){
+			if(_house.getName().equals(oldHouse.getName())){
+				allHouses.remove(_house);
+				setData();
+				return;
+			}
+		}   
+		System.out.println(oldHouse + " not found!");
 	}
 	
 	public House searchByName(String searchedHouse){
+		
+		for(House _house: allHouses){
+			if(_house.getName().equals(searchedHouse)){
+				return _house;
+			}
+		}   	
 		return null;
 	}
 	

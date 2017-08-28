@@ -38,36 +38,59 @@ public class SchoolService {
 		school = _school;
 	}
 	
-	
+
 	/// new classes	
 	public School getSchoolByName(String schoolName){
-		return null;
+		return searchByName(schoolName);
 	}
 	
 	public void showAllSchools(){
-		
+		for(School _school: allSchools){
+			System.out.println(_school.toString());
+		}
 	}
 	
-	public void showSchool(String schoolName){
-		
+	public void showSchool(String schoolName) throws FileNotFoundException, UnsupportedEncodingException{
+		for(School _school: allSchools){
+			if(_school.getName().equals(schoolName)){
+				System.out.println(_school.toString());
+				return;
+			}
+		}
+		System.out.println(schoolName + " not found!");
 	}
 	
-	public void createNewSchool(School newSchool){
-		
+	public void createNewSchool(School newSchool) throws IOException{
+		allSchools.add(newSchool);
+		setData();
 	}
 	
-	public void editSchool(School newSchool){
-		
+	public void editSchool(School newSchool) throws IOException{
+		school = newSchool;
+		setData();
 	}
 	
-	public void deleteSchool(School oldSchool){
-		
+	public void deleteSchool(School oldSchool) throws IOException{
+		for(School _school: allSchools){
+			if(_school.getName().equals(oldSchool.getName())){
+				allSchools.remove(_school);
+				setData();
+				return;
+			}
+		}   
+		System.out.println(oldSchool + " not found!");
 	}
 	
 	public School searchByName(String searchedSchool){
+		
+		for(School _school: allSchools){
+			if(_school.getName().equals(searchedSchool)){
+				return _school;
+			}
+		}   	
 		return null;
 	}
-
+	
 	public void getData(String fileName) throws IOException/* implement this method such that you will
 	receive the file name (schoolDB.txt) as an input and inside the method you
 	will open that file, read it and will fill up the information for each course (fill the

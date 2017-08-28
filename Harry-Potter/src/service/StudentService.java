@@ -38,32 +38,56 @@ public class StudentService {
 	
 	/// new classes	
 	public Student getStudentByName(String studentName){
-		return null;
+		return searchByName(studentName);
 	}
 	
 	public void showAllStudents(){
-		
+		for(Student _student: allStudents){
+			System.out.println(_student.toString());
+		}
 	}
 	
-	public void showStudent(String studentName){
-		
+	public void showStudent(String studentName) throws FileNotFoundException, UnsupportedEncodingException{
+		for(Student _student: allStudents){
+			if(_student.getName().equals(studentName)){
+				System.out.println(_student.toString());
+				return;
+			}
+		}
+		System.out.println(studentName + " not found!");
 	}
 	
-	public void createNewStudent(Student newStudent){
-		
+	public void createNewStudent(Student newStudent) throws IOException{
+		allStudents.add(newStudent);
+		setData();
 	}
 	
-	public void editStudent(Student newStudent){
-		
+	public void editStudent(Student newStudent) throws IOException{
+		student = newStudent;
+		setData();
 	}
 	
-	public void deleteStudent(Student oldStudent){
-		
+	public void deleteStudent(Student oldStudent) throws IOException{
+		for(Student _student: allStudents){
+			if(_student.getName().equals(oldStudent.getName())){
+				allStudents.remove(_student);
+				setData();
+				return;
+			}
+		}   
+		System.out.println(oldStudent + " not found!");
 	}
 	
 	public Student searchByName(String searchedStudent){
+		
+		for(Student _student: allStudents){
+			if(_student.getName().equals(searchedStudent)){
+				return _student;
+			}
+		}   	
 		return null;
 	}
+	
 
 	public void sortToHouse(House house){
 		Vector<Student> students = house.getStudents();

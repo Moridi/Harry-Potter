@@ -1,5 +1,0 @@
-package entities;
-
-public enum BloodStatus {
-	Muggle, Pure-blood, Half-blood, Muggle-born, Squibb
-}

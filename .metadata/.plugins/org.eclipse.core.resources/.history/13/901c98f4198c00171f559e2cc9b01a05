@@ -1,0 +1,229 @@
+package service;
+
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.Vector;
+
+import entities.*;
+
+public class Main {
+	public static int printChoices(){
+		System.out.println("Which kind of actions do you like "
+				+ "to shown:\n1- Create\n2- Edit\n3- Delete"
+				+ "\n4- Search\n5- Show all");
+		
+		Scanner reader = new Scanner(System.in);
+		int n = reader.nextInt();
+		
+		return n;
+	}
+	
+	public static String cin()
+	{
+		Scanner reader = new Scanner(System.in);
+		String s = reader.nextLine();
+		return s;
+	}
+	
+	public static Course getNewCourse(){
+		System.out.println("Please enter course data:\nex:\n"
+				+ "flying\nMadame Hooch\nO\n1996\n1\nHarry Potter");
+		
+		String courseName = cin();
+		
+		String professorName = cin();
+		Professor prof = new Professor(professorName);
+		
+		String _minGrade = cin();
+		Grade minGrade = Grade.valueOf(_minGrade);
+		
+		String _year = cin();
+		int year = Integer.parseInt(_year); 
+		
+    	String numberOfStudents = cin();
+    	int numOfStudents = Integer.parseInt(numberOfStudents);
+    	
+    	Vector<Student> students = new Vector<Student>();
+    	
+    	for(int i = 0; i < numOfStudents; i++){
+    		String studentName = cin();
+    		students.add(new Student(studentName));    		
+    	}
+    	
+    	Course newCourse = new Course(courseName, prof, minGrade, year);
+    	newCourse.setStudentNames(students);
+    	
+		return newCourse; 
+	}
+	
+
+	public static House getNewHouse(){
+		System.out.println("Please enter course data:\nex:\n"
+				+ "Ravenclaw\nHogwarts\n2\nLuna Lovegood\nCho Chang");
+		
+		String houseName = cin();
+		
+		String schoolName = cin();
+		School school = new School(schoolName);
+		
+    	String numberOfStudents = cin();
+    	int numOfStudents = Integer.parseInt(numberOfStudents);
+    	
+    	Vector<Student> students = new Vector<Student>();
+    	
+    	for(int i = 0; i < numOfStudents; i++){
+    		String studentName = cin();
+    		students.add(new Student(studentName));    		
+    	}
+    	
+    	House newHouse = new House(houseName, school, students);
+		return newHouse; 
+	}
+	
+	
+	public static void doCourseAction(int action) throws IOException{
+		if(action > 5 || action < 1)
+			return;
+		
+		//create, edit, delete, search, show all
+		
+		switch(action){
+		case(1):
+			Course newCourse = getNewCourse();
+			CourseService courseService = new CourseService(newCourse);
+			courseService.createNewCourse(newCourse);
+			System.out.println(newCourse.getName() + " added to courses and data base.");
+			break;
+			
+		case(2):
+			System.out.println("Please enter course name that you want to edit it:");
+			String courseName = cin();
+			Course newCourse1 = getNewCourse(); 
+			CourseService courseService1 = new CourseService(newCourse1);
+			Course courseWantToEdit = courseService1.searchByName(courseName);
+			CourseService courseService2 = new CourseService(courseWantToEdit);
+			courseService2.editCourse(newCourse1);
+			break;
+		
+		case(3):
+			System.out.println("Please enter course name that you want to delete it:");
+			String courseName1 = cin();
+			Course oldCourse = new Course(courseName1);
+			CourseService courseService3 = new CourseService(oldCourse);
+			courseService3.deleteCourse(oldCourse);
+			break;
+		
+		case(4):
+			System.out.println("Please enter course name that you want to shown:");
+			String courseName4 = cin();
+			CourseService courseService4 = new CourseService(new Course(courseName4));
+			courseService4.showCourse(courseName4);
+			break;
+		
+		case(5):
+			CourseService courseService5 = new CourseService(new Course("flying"));
+			courseService5.showAllCourses();
+			break;
+		
+		default:
+			break;
+	}
+		
+}
+	
+	public static void doHouseAction(int action) throws IOException{
+		if(action > 5 || action < 1)
+			return;
+		
+		//create, edit, delete, search, show all
+		
+		switch(action){
+		case(1):
+			House newCourse = getNewHouse();
+			HouseService courseService = new HouseService(newCourse);
+			courseService.createNewHouse(newCourse);
+			System.out.println(newCourse.getName() + " added to Houses and data base.");
+			break;
+			
+		case(2):
+			System.out.println("Please enter house name that you want to edit it:");
+			String courseName = cin();
+			House newCourse1 = getNewHouse(); 
+			HouseService courseService1 = new HouseService(newCourse1);
+			House courseWantToEdit = courseService1.searchByName(courseName);
+			HouseService courseService2 = new HouseService(courseWantToEdit);
+			courseService2.editHouse(newCourse1);
+			break;
+		
+		case(3):
+			System.out.println("Please enter House name that you want to delete it:");
+			String courseName1 = cin();
+			House oldCourse = new House(courseName1);
+			HouseService courseService3 = new HouseService(oldCourse);
+			courseService3.deleteHouse(oldCourse);
+			break;
+		
+		case(4):
+			System.out.println("Please enter House name that you want to shown:");
+			String courseName4 = cin();
+			HouseService courseService4 = new HouseService(new House(courseName4));
+			courseService4.showHouse(courseName4);
+			break;
+		
+		case(5):
+			HouseService courseService5 = new HouseService(new House("Gryffindor"));
+			courseService5.showAllCourses();
+			break;
+		
+		default:
+			break;
+	}
+		
+}
+	
+	
+	public static void main(String[] args) throws IOException{
+		while(true)
+		{
+			System.out.println("\nHello!\nWhich kind of entities do you like "
+				+ "to shown:\n1- Course\n2- House\n3- Person"
+				+ "\n4- Professor\n5- School\n6- Student");
+			
+			Scanner reader = new Scanner(System.in);
+			int n = reader.nextInt();
+			
+			if(n > 6 || n < 1)
+			{
+				System.out.println("Illegal input!Please choose other ones.");
+				continue;
+			}
+			
+			int action = printChoices();
+			
+			switch(n){
+				case(1):
+					doCourseAction(action);
+					break;
+					
+				case(2):
+					
+					break;
+				
+				case(3):
+					break;
+				
+				case(4):
+					break;
+				
+				case(5):
+					break;
+				
+				case(6):
+					break;
+				
+				default:
+					break;
+			}
+		}
+	}
+}

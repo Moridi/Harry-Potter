@@ -46,34 +46,56 @@ public class ProfessorService {
 	}
 	
 	/// new classes	
-			public Professor getProfessorByName(String professorName){
-				return null;
-			}
-			
-			public void showAllProfessors(){
-				
-			}
-			
-			public void showProfessor(String professorName){
-				
-			}
-			
-			public void createNewProfessor(Professor newProfessor){
-				
-			}
-			
-			public void editProfessor(Professor newProfessor){
-				
-			}
-			
-			public void deleteProfessor(Professor oldProfessor){
-				
-			}
-			
-			public Professor searchByName(String searchedProfessor){
-				return null;
-			}
+	public Professor getProfessorByName(String professorName){
+		return searchByName(professorName);
+	}
 	
+	public void showAllProfessors(){
+		for(Professor _professor: allProfessors){
+			System.out.println(_professor.toString());
+		}
+	}
+	
+	public void showProfessor(String professorName) throws FileNotFoundException, UnsupportedEncodingException{
+		for(Professor _professor: allProfessors){
+			if(_professor.getName().equals(professorName)){
+				System.out.println(_professor.toString());
+				return;
+			}
+		}
+		System.out.println(professorName + " not found!");
+	}
+	
+	public void createNewProfessor(Professor newProfessor) throws IOException{
+		allProfessors.add(newProfessor);
+		setData();
+	}
+	
+	public void editProfessor(Professor newProfessor) throws IOException{
+		professor = newProfessor;
+		setData();
+	}
+	
+	public void deleteProfessor(Professor oldProfessor) throws IOException{
+		for(Professor _professor: allProfessors){
+			if(_professor.getName().equals(oldProfessor.getName())){
+				allProfessors.remove(_professor);
+				setData();
+				return;
+			}
+		}   
+		System.out.println(oldProfessor + " not found!");
+	}
+	
+	public Professor searchByName(String searchedProfessor){
+		
+		for(Professor _professor: allProfessors){
+			if(_professor.getName().equals(searchedProfessor)){
+				return _professor;
+			}
+		}   	
+		return null;
+	}
 	
 	public void getData(String fileName) throws IOException /* implement this method such that you will
 	receive the file name (professorDB.txt) as an input and inside the method you will

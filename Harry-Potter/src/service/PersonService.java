@@ -37,36 +37,56 @@ public class PersonService {
 	}
 
 	/// new classes	
-		public Person getPersonByName(String personName){
-			return null;
-		}
-		
-		public void showAllPersons(){
-			
-		}
-		
-		public void showPerson(String personName){
-			
-		}
-		
-		public void createNewPerson(Person newPerson){
-			
-		}
-		
-		public void editPerson(Person newPerson){
-			
-		}
-		
-		public void deletePerson(Person oldPerson){
-			
-		}
-		
-		public Person searchByName(String searchedPerson){
-			return null;
-		}
-			
+	public Person getPersonByName(String personName){
+		return searchByName(personName);
+	}
 	
+	public void showAllPersons(){
+		for(Person _person: allPersons){
+			System.out.println(_person.toString());
+		}
+	}
 	
+	public void showPerson(String personName) throws FileNotFoundException, UnsupportedEncodingException{
+		for(Person _person: allPersons){
+			if(_person.getName().equals(personName)){
+				System.out.println(_person.toString());
+				return;
+			}
+		}
+		System.out.println(personName + " not found!");
+	}
+	
+	public void createNewPerson(Person newPerson) throws IOException{
+		allPersons.add(newPerson);
+		setData();
+	}
+	
+	public void editPerson(Person newPerson) throws IOException{
+		person = newPerson;
+		setData();
+	}
+	
+	public void deletePerson(Person oldPerson) throws IOException{
+		for(Person _person: allPersons){
+			if(_person.getName().equals(oldPerson.getName())){
+				allPersons.remove(_person);
+				setData();
+				return;
+			}
+		}   
+		System.out.println(oldPerson + " not found!");
+	}
+	
+	public Person searchByName(String searchedPerson){
+		
+		for(Person _person: allPersons){
+			if(_person.getName().equals(searchedPerson)){
+				return _person;
+			}
+		}   	
+		return null;
+	}	
 
 	public void getData(String fileName) throws IOException /* implement this method such that you will
 	receive the file name (PersonDB.txt) as an input and inside the method you

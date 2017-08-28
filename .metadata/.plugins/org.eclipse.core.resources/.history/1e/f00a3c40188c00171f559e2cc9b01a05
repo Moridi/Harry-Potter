@@ -1,0 +1,170 @@
+package service;
+
+import entities.*;
+
+import java.util.Vector;
+import java.io.*;
+
+public class CourseService {
+		private Course course;//The course the services are performed on/at
+		private Vector<Course> allCourses;//All the courses in the system
+
+		
+		public CourseService(Course _course) throws IOException {
+			course = _course;
+			allCourses = new Vector<Course>();
+			this.getData("CourseDB.txt");
+		}
+		
+		public CourseService() throws IOException {
+			this(null);
+		}
+		
+		public Course getCourse() {
+			return course;
+		}
+
+		public void setCourse(Course _course) {
+			course = _course;
+		}
+
+		public Vector<Course> getAllCourses() {
+			return allCourses;
+		}
+
+		public void setAllCourses(Vector<Course> _allCourses) {
+			allCourses = _allCourses;
+		}
+		
+		/// new classes	
+		public Course getCourseByName(String courseName){
+			return searchByName(courseName);
+		}
+		
+		public void showAllCourses(){
+			for(Course _course: allCourses){
+				System.out.println(_course.toString());
+			}
+		}
+		
+		public void showCourse(String courseName) throws FileNotFoundException, UnsupportedEncodingException{
+			for(Course _course: allCourses){
+				if(_course.getName().equals(courseName)){
+					System.out.println(_course.toString());
+					setData();
+					return;
+				}
+			}
+			System.out.println(courseName + " not found!");
+		}
+		
+		public void createNewCourse(Course newCourse) throws FileNotFoundException, UnsupportedEncodingException{
+			allCourses.add(newCourse);
+			setData();
+		}
+		
+		public void editCourse(Course newCourse) throws FileNotFoundException, UnsupportedEncodingException{
+			course = newCourse;
+			setData();
+		}
+		
+		public void deleteCourse(Course oldCourse) throws FileNotFoundException, UnsupportedEncodingException{
+			for(Course _course: allCourses){
+				if(_course.getName().equals(oldCourse.getName())){
+					allCourses.remove(_course);
+					setData();
+					return;
+				}
+			}   
+			System.out.println(oldCourse + " not found!");
+		}
+		
+		public Course searchByName(String searchedCourse){
+			
+			for(Course _course: allCourses){
+				if(_course.getName().equals(searchedCourse)){
+					return _course;
+				}
+			}   	
+			System.out.println(searchedCourse + " not found!");
+			return null;
+		}
+		
+		public void getData(String fileName) throws IOException
+		/* implement this method such that you will
+		receive the file name (courseDB.txt) as an input and inside the method you
+		will open that file, read it and will fill up the information for each course (fill the
+		vector)*/
+		{
+	        FileReader freader = new FileReader(fileName);  
+	        BufferedReader br = new BufferedReader(freader);  
+	        String s;  
+	        while((s = br.readLine()) != null) {
+	        	if(s.equals("$")){
+	        		break;
+	        	}
+	        	String courseName = s;
+	        	
+	        	String _minGrade = br.readLine();
+	        	Grade minGrade = Grade.valueOf(_minGrade);
+	        	
+	        	String professorName = br.readLine();
+	        	Professor professor = new Professor(professorName);
+	        	
+	        	String _year = br.readLine();
+	        	int year = Integer.parseInt(_year); 
+	        			
+	        	String numberOfStudents = br.readLine();
+	        	int numOfStudents = Integer.parseInt(numberOfStudents);
+	        	
+	        	Vector<Student> students = new Vector<Student>();
+	        	
+	        	for(int i = 0; i < numOfStudents; i++){
+	        		String studentName = br.readLine();
+	        		students.add(new Student(studentName));    		
+	        	}
+	        	
+	        	Course newCourse = new Course(courseName, professor, minGrade, year);
+	        	
+	        	newCourse.setStudentNames(students);
+	        	
+	        	allCourses.add(newCourse);
+	        		    
+	        	s = br.readLine();	
+	        }  
+	        freader.close(); 
+		}
+		
+
+		public void setData() throws FileNotFoundException, UnsupportedEncodingException/* implement this method so you can fill
+		your database using the vector of courses you have */
+		{
+			PrintWriter writer = new PrintWriter("CourseDB.txt", "UTF-8");
+			for(Course x: allCourses)
+			{			
+				writer.println(x.getName());
+				writer.println(x.getMinGrade().toString());
+				if(x.getProfessorName() == null)
+					writer.println("--");
+				else
+					writer.println(x.getProfessorName().getName());
+				
+				writer.println(x.getYear());
+
+				if(x.getStudentNames() == null)
+					writer.println("0");
+				
+				else{
+					writer.println(x.getStudentNames().size());
+				
+					for(Student student: x.getStudentNames()){
+						writer.println(student.getName());
+					}
+				}
+				writer.println("*");
+			}
+			writer.println("$");
+			writer.close();
+		}
+		
+}

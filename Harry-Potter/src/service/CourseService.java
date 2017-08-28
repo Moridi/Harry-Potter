@@ -38,15 +38,23 @@ public class CourseService {
 		
 		/// new classes	
 		public Course getCourseByName(String courseName){
-			return null;
+			return searchByName(courseName);
 		}
 		
 		public void showAllCourses(){
-			
+			for(Course _course: allCourses){
+				System.out.println(_course.toString());
+			}
 		}
 		
-		public void showCourse(String courseName){
-			
+		public void showCourse(String courseName) throws FileNotFoundException, UnsupportedEncodingException{
+			for(Course _course: allCourses){
+				if(_course.getName().equals(courseName)){
+					System.out.println(_course.toString());
+					return;
+				}
+			}
+			System.out.println(courseName + " not found!");
 		}
 		
 		public void createNewCourse(Course newCourse) throws FileNotFoundException, UnsupportedEncodingException{
@@ -54,15 +62,30 @@ public class CourseService {
 			setData();
 		}
 		
-		public void editCourse(Course newCourse){
-			
+		public void editCourse(Course newCourse) throws FileNotFoundException, UnsupportedEncodingException{
+			course = newCourse;
+			setData();
 		}
 		
-		public void deleteCourse(Course oldCourse){
-			
+		public void deleteCourse(Course oldCourse) throws FileNotFoundException, UnsupportedEncodingException{
+			for(Course _course: allCourses){
+				if(_course.getName().equals(oldCourse.getName())){
+					allCourses.remove(_course);
+					setData();
+					return;
+				}
+			}   
+			System.out.println(oldCourse + " not found!");
 		}
 		
 		public Course searchByName(String searchedCourse){
+			
+			for(Course _course: allCourses){
+				if(_course.getName().equals(searchedCourse)){
+					return _course;
+				}
+			}   	
+			System.out.println(searchedCourse + " not found!");
 			return null;
 		}
 		
